@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Search</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0px;
+            padding:0px;
+            background-color: 
+#f8f8f8;
+font-family: 'Lato', sans-serif;
+
+        }
+        #searchDiv{
+            width:65%;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:23px;
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            margin-top:15px;
+            font-size: 14px;
+
+        }
+        .cardDiv{
+            /* border:1px solid teal; */
+            text-align: center;
+
+        }
+        img{
+            width:100%;
+            height:140px;
+            margin-bottom: 10px;
+        }
+        #heading{
+            width:65%;
+            margin: auto;
+        }
+        #heading h3{
+            font-size:24px ;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+        #heading p{
+            font-size: 14px;
+            color:
+rgb(149, 151, 153)
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">
+        <h3>Shop by categories</h3>
+        <p>Freshest meats just for you</p>
+
+    </div>
+   
+    <div id="searchDiv"></div>
+
+
+</body>
+
+</html>
+<script>
+    let searchData = [
+        {
+            name: "Chiken",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png",
+        },
+        {
+            name: "Fish & Seafood",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png",
+        },
+        {
+            name: "Mutton",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png",
+        },
+        {
+            name: "Read to Cook",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0a8c4f08-15e7-12e5-a696-286cddadf373/original/RTC_(2).png",
+        },
+        {
+            name: "Prawns",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b528b5d9-aae1-8814-99d5-8642e2ee3676/original/Prawns.png",
+        },
+        {
+            name: "Cold Cuts",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d08157a7-8828-4978-eb3f-3408cfe7d1f9/original/Venus_(1).png",
+        },
+        {
+            name: "Spreads",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/066b2145-5678-c1c6-5a05-5e5e53840101/original/Continental-egg-spread.png",
+        },
+        {
+            name: "Eggs",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/54771c04-5aae-094d-8739-b22d09ab284e/original/Eggs.png",
+        },
+        {
+            name: "Biryani& Kebab",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8f6c3a69-7867-05d5-9367-ed091bdf3c61/original/hyd-chicken.png",
+        },
+        {
+            name: "Combos",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b8169e6d-59ae-ba6f-f839-ec0883a9742e/original/Combo2.png",
+        },
+        {
+            name: "Featured Collections",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png",
+        },
+
+    ];
+    let searchDiv = document.getElementById("searchDiv");
+
+    function displayData(searchData) {
+        console.log(searchData);
+        //searchDiv.innerHTML = "";
+        searchData.forEach(function (el) {
+            let card = document.createElement("div");
+            card.setAttribute("class","cardDiv")
+            let image = document.createElement("img");
+            image.src = el.url;
+            let pTag = document.createElement("p");
+            pTag.innerText = el.name;
+
+            card.append(image, pTag);
+            searchDiv.append(card);
+
+
+        });
+    }
+
+    displayData(searchData);
+
+</script>
