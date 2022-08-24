@@ -1,0 +1,531 @@
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+          <title>Document</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+               rel="stylesheet"
+          />
+          <link
+               rel="stylesheet"
+               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          />
+          <link
+               rel="stylesheet"
+               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,255,0"
+          />
+          <style>
+               * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: "Lato", sans-serif;
+                    letter-spacing: 1px;
+               }
+
+               #popup-screen {
+                    z-index: 9999999;
+                    position:fixed;
+                    background: rgba(0, 0, 0, 0.5);
+                    /* background-color: black; */
+                    /* backdrop-filter: blur(0.5px); */
+                    width: 100%;
+                    height: 100vh;
+                    top: 0;
+                    /* opacity: .1; */
+               }
+
+               #cart-sidebar {
+                    position:absolute;
+                    width: 450px;
+                    height: 100vh;
+                    /* min-height: 100vh; */
+                    background-color:whitesmoke;
+                    right:0px;
+                    /* bottom:0px; */
+                    /* left: 100%; */
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    /* padding: 20px; */
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+                    
+                    /* scroll-snap-type: proximity; */
+                    
+                    /* overflow:scroll; */
+               }
+               #cart-sidebar::-webkit-scrollbar{
+                    background-color: #777;
+                    width: 1vw;
+                    opacity: 0.5;
+                    position: fixed;
+                    background-color: rgba(250, 250, 293, 0.25);
+               }
+               #cart-sidebar::-webkit-scrollbar-thumb{
+                    background-color: rgb(117, 115, 115,.3);
+                    height:1px;
+                    border-radius: 10px;
+                    /* opacity: 0.5; */
+               }
+               #cart-sidebar>h4{
+                padding: 25px;
+                background-color: white;
+               }
+               #free-delivery{
+                background-color: rgb(71, 115, 6);
+                width: 100%;
+                padding:12px 10px;
+                font-size: 12px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-weight: 600;
+                
+                /* font-stretch: expanded; */
+                /* line-height: 20px; */
+               }
+               #order-summary{
+                    width: 95%;
+                    padding:0px 10px;
+                    background-color: white;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                    /* display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; */
+                    margin:0 auto;
+               }
+               #order-summary1{
+                    display: grid;
+                    grid-template-columns:6% 70% 10%;
+                    font-size: 13; 
+                    gap: 2px;
+                    padding: 10px;
+                    /* justify-items:center ;     */
+                    align-items: center;
+               }
+               #order-name{
+                    font-size: 15px;
+                    line-height: 1.5;
+               }
+               .somke{
+                    background-color:whitesmoke;
+                    /* border: 1px solid red ; */
+                    width: 18px;
+                    border: none;
+                    display: flex;
+                    height: 18px;
+                    padding:2 4;
+                    justify-content: center;
+                    align-items: center;
+               }
+               #cross{
+               margin-right: 10px;
+               font-size: 15;
+               margin-left: 70px;
+               cursor: pointer;
+               }
+               #kkk{
+                    width: 25px;
+                    height: 25px;
+                    /* background-color: white; */
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    position: fixed;
+                    right: 460px;
+                    top: 20px;
+                    /* text-align: center; */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20;
+                    color: white;  
+                    padding: 15px;
+                    cursor: pointer;
+               }
+               #order-summary2{
+               display: grid;
+               grid-template-columns:40% 55%;
+               padding-bottom:25;
+               }
+               #item-detail{
+               display: flex;
+               gap:5px;
+               font-size: 12px;
+               align-items: center;
+               justify-content: center;
+               }
+               #item-weight{
+               border: 1px solid gray;
+               padding: 5px;
+               align-items: center;
+               justify-content: center;
+               border-radius: 5px;
+               }
+               #item-price{
+               color: rgb(249, 0, 71);
+               font-weight: 600;
+               }
+               #p-gray{
+               color: gray;
+               font-size: 13px;
+               padding:2% 10px;
+               }
+               #qut{
+               display: flex;
+               gap: 10px;
+               justify-content: right;
+               }
+               #add-qut{
+               color: rgb(237, 20, 85);
+               font-size: 20px;
+               padding: 5%;
+               cursor: pointer;
+               }
+               #sub-qut{
+               color: rgb(237, 20, 85);
+               font-size: 30px;
+               padding: 5%;
+               cursor: pointer;
+               }
+               #join-licious{
+                    width: 95%;
+                    margin: 0 auto;
+               display: flex;
+               justify-content: space-between;
+               padding: 4%;
+               background-color: rgb(247, 207, 159);
+               border-radius: 8px;
+               box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+               align-items: center;
+               cursor: pointer;
+               }
+               #join-licious>img{
+               height: 150%;
+               }
+               #join-licious>h5{
+                    font-size: 15px;
+                    color: rgb(237, 20, 85);
+               }
+               #bill{
+               width: 95%;
+               margin: 0 auto;
+               display: grid;
+               gap: 10px;
+               border: 1px dashed ;
+               padding: 20px;
+               margin-top: 20px;
+               /* position: absolute; */
+               bottom: 20px;
+               left: 10px;
+               }
+               #bill>p{
+               display: flex;
+               justify-content: space-between;
+               /* line-height: 30px; */
+               font-size: 13px;
+               
+               }
+               #bill>h5{
+               display: flex;
+               justify-content: space-between;
+               /* line-height: 30px; */
+               font-size: 13px;
+               }
+              #btm-content{
+               /* width:10%; */
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    width: 98%;
+                    display: grid;
+                    /* justify-content:right; */
+                    background-color: white;
+                    /* border: 1ps solid red; */
+                    /* margin: 0 5; */
+                    /* margin: auto; */
+                    position:sticky;
+                    left:1000px;
+                    /* right: 0%; */
+                    
+
+               }
+               #add-add{
+                    display: grid;
+                    grid-template-columns:10% 60% 30% ;
+                    align-items: center;
+                    padding:10 20px;
+                    
+               }
+               #add-add>img{
+               width: 80%;
+               }
+               #add-add>a{
+                    text-decoration: none;
+                    color: rgb(235, 52, 82);
+               }
+               #address{
+               padding: 0 10;
+               }
+               #tp-box{
+                    height: 60px;
+               display:grid;
+               text-align: center;
+               justify-content: center;
+               grid-template-columns: repeat(2,1fr);
+               /* padding: 10px; */
+               /* border: 1px solid; */
+               margin-top: 10px;
+              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+               
+
+               }
+               #tp-box>h3{
+                    display: flex;
+                    justify-content: center;
+               align-items: center;
+               }
+               #proceed_ch{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(224, 44, 74);
+                    color: white;
+                    /* height: 60px; */
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+               }
+               #ccg{
+                    width: 440px; position: fixed; bottom: 15;right: 10;
+               }
+          </style>
+     </head>
+
+     <body>
+          <!-- <span class="material-symbols-outlined"> cancel </span> -->
+          <div id="popup-screen">
+               <div id="kkk">X</div>
+               <div id="cart-sidebar" >
+                    <h4>Order Summary</h4>
+                    <div id="free-delivery">
+                        <p>Congratulations, Your delivery charge is waived off!!!</p>
+                    </div>
+                    <div id="order-summary">
+                        
+                        
+                    </div>
+                    <p id="p-gray">Stop paying delivery charges. Join Meatopia today!</p>
+                    <div id="join-licious">
+                    <img src="https://www.licious.in/img/rebranding/loyalty_licious_logo.svg" alt="">
+                    <h5 id="join-licious-btn">JOIN NOW ></h5>
+                    </div>
+                    <div>
+                    <div id="bill">
+                         <h4>BILL DETAILS</h4>
+                         <p id="subtotal">
+                              <span>Subtotal</span>
+                              <span id="total-amount">155</span>
+                         </p>
+                         <p>
+                                   <span>Delivery Charge</span>
+                                   <span>0</span>
+                    </p>
+                    <p>
+                                   <span>Discount</span>
+                                   <span>0</span>
+                    </p>
+                    <hr>
+                    <h5 >
+                         <span>Total</span>
+                         <span id="total-amount">₹ 155</span>
+                    </h5>
+                    
+               </div>
+               <div style="height:160px;"></div>
+               </div>
+               </div>
+<div id="ccg">
+                    <div id="btm-content">
+                         <div id="add-add">
+                         <img src="https://www.licious.in/img/rebranding/map-icon.png" alt="">
+                         <h2> Shipping address</h2>
+                         <a href="./address.html">Add Address</a>
+                         </div>
+                         <p id="address">kolkata</p>
+                         <div id="tp-box">
+                              <h3 >
+                              <span>Total :</span>
+                              <span id="total-amount">₹ 155 <img src="https://www.licious.in/img/rebranding/info-icon.svg" alt=""></span>
+                              </h3>
+                              <div id="proceed_ch">
+                                   Proceed to checkout
+                              </div>
+                         </div>
+                    </div>
+                    
+</div>
+
+          </div>
+     </body>
+</html>
+<script>
+var data=[
+  {
+      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/11/prod_display_image/1631077587.2029--2021-09-0810:36:27--1818",
+      name:"Chiken Curry Cut (Large pcs) - Large Pack",
+      des:"Half chiken cut to chunky pieces including Two leg a...",
+      net_tag:"Net wt",
+      net:"1000",
+      gross_tag:"Gross wt",
+       gross:"1026",
+       pieces_tag:"Pieces:",
+       pieces:"",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"318",
+      strikePrice:"335",
+      off:"5",
+      off_tag:"% OFF"
+
+  },
+  {
+      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_3lyki5xft44/11/prod_display_image/1612636456.399--2021-02-0700:04:16--738",
+      name:"Eggs - Brown, Antibiotic Residue Free(Pack of 12",
+      des:"Brown shell eggs laid naturally by healthy hens",
+      net_tag:"Net wt",
+      net:"12",
+      gross_tag:"Gross wt",
+       gross:"",
+       pieces_tag:"Pieces:",
+       pieces:"12",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"115",
+      strikePrice:"135",
+      off:"15",
+      off_tag:"% OFF"
+
+  },
+  {
+      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_4cyjya5ry5e/11/prod_display_image/1634636534.1399--2021-10-1915:12:14--1818?format=webp",
+      name:"Chunky Butter Chiken Spread",
+      des:"Mildly spiced chunks of freshly rosted chiken blended...",
+      net_tag:"Net wt",
+      net:"200",
+      gross_tag:"Gross wt",
+       gross:"200",
+       pieces_tag:"Pieces:",
+       pieces:"",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"149",
+      strikePrice:"199",
+      off:"25",
+      off_tag:"% OFF"
+
+  },
+  {
+      imgUrl:"https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/6d8cefaa-06fa-494a-b67d-74a7f0d78387/original/Chunky-Shawarma-Chicken-Spread_(7).jpg?format=webp",
+      name:"Chunky Shawarma Chiken Spread",
+      des:"A creamy base with freshly rosted chiken chunks alon...",
+      net_tag:"Net wt",
+      net:"200",
+      gross_tag:"Gross wt",
+       gross:"200",
+       pieces_tag:"Pieces:",
+       pieces:"",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"149",
+      strikePrice:"",
+      off:"25",
+      off_tag:"% OFF"
+
+
+  },
+  {
+      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_7olkuhu3ohb/11/prod_display_image/1634748531.1979--2021-10-2022:18:51--1818",
+      name:"Lean Goat Curry Cut - Small Pieces",
+      des:"Trimmed bone-in & boneless pieces",
+      net_tag:"Net wt",
+      net:"450",
+      gross_tag:"Gross wt",
+       gross:"979",
+       pieces_tag:"Pieces:",
+       pieces:"",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"537",
+      strikePrice:"565",
+      off:"5",
+      off_tag:"% OFF"
+
+  },
+  
+  {
+      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_1qzjxbz6jmj/11/prod_display_image/1636909667.0048--2021-11-1422:37:47--1818?format=webp",
+      name:"Indian salmon(Rawas/Gurjali) - boneless Cubes",
+      des:"Boneless cubes of omega 3 rich, low fat, white fleshed...",
+      net_tag:"Net wt",
+      net:"300",
+      gross_tag:"Gross wt",
+       gross:"900",
+       pieces_tag:"Pieces:",
+       pieces:"",
+       unit:"gms",
+       price_tag:"MRP:",
+       currency:"₹",
+      price:"620",
+      strikePrice:"729",
+      off:"15",
+      off_tag:"% OFF"
+
+  },
+
+]
+
+      localStorage.setItem("todaydata",JSON.stringify(todaydata));
+function slidorder() {
+     return ``
+}
+let summary= document.getElementById("order-summary");
+function addtproducttocart(){
+     let item=``
+     data.forEach((el)=> {
+item+= `<div id="order-item">
+                         <div id="order-summary1">
+                              <button id="item-number" class="somke">1</button>
+                              <!-- <button>1</button> -->
+                              <h3 id="order-name">Chicken Curry Cut - Large Pieces (Large Pack)</h3>
+                                   
+                                   <p id="cross">X</p>
+                         </div>
+                         <div id="order-summary2">
+                              <div id="item-detail">
+                                   <div id="item-weight">1000gms</div>
+                                   <div id="item-price">₹ 155</div>
+                              </div>
+                         <div id="qut">
+                         <div id="add-qut" class="somke">+</div>
+                         <div id="item-qut">1</div>
+                         <div id="sub-qut" class="somke">-</div>
+                         </div>
+                         </div>
+                         </div>`
+summary.innerHTML=item
+     })
+}
+
+addtproducttocart()
+</script>
