@@ -55,6 +55,14 @@ font-family: 'Lato', sans-serif;
             color:
 rgb(149, 151, 153)
         }
+
+        /* .image:hover{
+            cursor: pointer;
+        } */
+        .cardDiv:hover{
+            cursor: pointer;
+            color:red;
+        }
     </style>
 </head>
 
@@ -73,49 +81,53 @@ rgb(149, 151, 153)
 </html>
 <script>
     let searchData = [
+    {
+            name: "Today's Deals",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d52759ea-ba5a-0f5b-3dc1-d28875335a3f/original/Todays_Deal_1.png",
+        },
         {
-            name: "Chiken",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png",
+            name: "Chicken",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ad04872e-60af-387c-533c-efa7dc6eb565/original/Chicken_(1).png",
         },
         {
             name: "Fish & Seafood",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/eb162d28-5f88-a381-1d45-7f2f66d2c776/original/FIsh.png",
         },
         {
             name: "Mutton",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/7113e792-7025-9e6f-6057-7174edf30856/original/Mu.png",
         },
         {
             name: "Read to Cook",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/0a8c4f08-15e7-12e5-a696-286cddadf373/original/RTC_(2).png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/43faaebc-f2ae-102a-ea01-af3e6c37a890/original/RTC.png",
         },
         {
             name: "Prawns",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b528b5d9-aae1-8814-99d5-8642e2ee3676/original/Prawns.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/404e48e5-c887-1e12-7a3a-232e01fc9771/original/Prawn.png",
         },
         {
             name: "Cold Cuts",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d08157a7-8828-4978-eb3f-3408cfe7d1f9/original/Venus_(1).png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/5c7f1b3a-47b4-3ade-f170-f003cace2482/original/Coldcuts.png",
         },
         {
             name: "Spreads",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/066b2145-5678-c1c6-5a05-5e5e53840101/original/Continental-egg-spread.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/88d8c760-ee1f-7696-7827-fcc9661925cc/original/Spread_Bottle1.png",
         },
         {
             name: "Eggs",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/54771c04-5aae-094d-8739-b22d09ab284e/original/Eggs.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/04d58840-f014-e613-24d4-1908db9a7e63/original/Eggs.png",
         },
         {
-            name: "Biryani& Kebab",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8f6c3a69-7867-05d5-9367-ed091bdf3c61/original/hyd-chicken.png",
+            name: "Biryani & Kebab",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/189690c6-c9d5-2441-938b-6c7e124972c7/original/Biryani.png",
         },
         {
             name: "Combos",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b8169e6d-59ae-ba6f-f839-ec0883a9742e/original/Combo2.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/9d531fa3-8969-b105-6e93-f8810d54ab4c/original/Combo_(1).png",
         },
         {
             name: "Featured Collections",
-            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png",
+            url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/4720e482-c73d-6cca-3616-466432b4d0da/original/Ft_Collection_3_(1).png",
         },
 
     ];
@@ -127,10 +139,14 @@ rgb(149, 151, 153)
         searchData.forEach(function (el) {
             let card = document.createElement("div");
             card.setAttribute("class","cardDiv")
+
             let image = document.createElement("img");
             image.src = el.url;
+            image.setAttribute("class","image");
+
             let pTag = document.createElement("p");
             pTag.innerText = el.name;
+            pTag.setAttribute("class","name");
 
             card.append(image, pTag);
             searchDiv.append(card);
