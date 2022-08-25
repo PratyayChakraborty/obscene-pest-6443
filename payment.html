@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <style>
+        html {
+            width: 1200px;
+            margin: auto;
+            background-color: rgb(232, 232, 232);
+        }
+        body{
+            font-family: "Lato";
+        }
+
+        #payment {
+            display: flex;
+            margin-top: 50px;
+
+
+        }
+
+        #payment_option {
+            width: 60%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: white;
+            display: flex;
+        }
+
+        #payment_proccese {
+            width: 38%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            margin: auto;
+        }
+
+        #payment_methord {
+            width: 25%;
+
+
+            text-align: center;
+
+
+        }
+
+        #payment_methord div {
+            border: 1px solid rgb(232, 232, 232);
+            height: 55px;
+            display: flex;
+            font-weight: 700;
+            padding-left: 10px;
+            align-items: center;
+
+
+
+        }
+
+        #payment_detail {
+            width: 70%;
+            
+        }
+
+        .offer {
+            margin-left: 20px;
+            margin-top: -19px;
+
+        }
+
+        #payment_detail h1 {
+            margin-left: 20px;
+           
+             
+        }
+
+        .offer p:nth-child(1) {
+            margin-left: 20px;
+
+        }
+
+        .offer_first {
+            display: flex;
+            margin-bottom: 5px;
+             
+        }
+
+        .offer_first img {
+            width: 17px;
+            height: 16px;
+            margin-top: 10px;
+           
+        }
+        .offer_secund  {
+             margin-left: 17px;
+             margin-top: -10px;
+             margin-bottom: 25px;
+             color: #777777;
+            
+             
+             
+       }
+       #card{
+        margin-left: 30px;
+        font-size: 40px;
+       }
+       #input_card{
+          border: 0;
+          outline: 0;
+          border-bottom: 2px solid red;
+          font-size: 40px;
+         
+       }
+       
+
+    </style>
+</head>
+
+<body>
+    <h1> navar</h1>
+    <div id="payment">
+        <div id="payment_option">
+            <div id="payment_methord">
+                <div> Saved Payments</div>
+                <div> Paytam </div>
+                <div>Amazon Pay</div>
+                <div>Pay Using UPI</div>
+                <div onclick="credit()">Credit / Debit Cards</div>
+                <div>CRED pay</div>
+                <div>Sodexo Food Cards</div>
+                <div>Netbanking</div>
+                <div>Other wallets</div>
+                <div>Cash on Delivery </div>
+                <div>Pay Online on Delivery</div>
+            </div>
+            <div id="payment_detail">
+
+            </div>
+        </div>
+        <div id="payment_proccese">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    credit = () => {
+
+        let data = [
+            {
+                offer: "15% off | ICICI Credit Cards",
+                heading: '15% off upto 150 on ICICI Credit Cards | On orders above 750 | Valid thrice per user per month | Valid everyday'
+            },
+            {
+                offer: "15% off | Yes Bank Credit Cards",
+                heading: '15% off upto 150 on Yes Bank Credit Cards | Minimum order value 599 | Valid twice per user | Valid everyday'
+            },
+            {
+                offer: "10% off | Axis Credit and Debit cards",
+                heading: '10% off upto 150 on all Axis Bank Cards | Minimum order value 750 | Valid once per user | Valid on Wednesday'
+            },
+            {
+                offer: " 20% off | Federal Bank Debit Cards",
+                heading: '20% off upto 200 on Federal Bank Debit Cards | Minimum order value 400 | Valid twice per user | Valid everyday'
+            },
+            {
+                offer: "25% off | Slice Cards",
+                heading: '25% off upto 200 on slice card | Minimum order value 600 | Valid once per user | Valid from Mon-Wed'
+            },
+            {
+                offer: "10% off | HSBC Credit Card",
+                heading: '10% off upto 150 on HSBC Credit Cards | Minimum order value 600 | Valid once per user | Valid from Mon to Fri'
+            },
+            {
+                offer: "15% cashback on Simpl",
+                heading: '15% cashback upto 150 on Simpl | Minimum order value 0 for new Simpl users and 500 for existing Simpl users | Valid once per user | Valid on all days'
+            },
+            {
+                offer: "Up to Rs.100 cashback on CRED Pay",
+                heading: 'Pay using CRED pay and get cashback upto Rs.100. T&Cs apply. Applicable 2 times per month'
+            },
+            {
+                offer: "20% off | Bank of Baroda Credit Cards",
+                heading: '20% off upto 200 on BoB Credit Cards | Minimum order value 600 | Valid twice per user | Valid everyday'
+            },
+            {
+                offer: "25% off | Federal Bank Credit Cards",
+                heading: '25% off upto 300 on Federal Bank Credit Cards | Minimum order value 400 | Valid twice per user | Valid everyday'
+            },
+            {
+                offer: "25% off | Ring Cards",
+                heading: '25% off upto 200 on Ring Cards | Minimum order value 300 | Valid twice per user | Valid everyday'
+            },
+            {
+                offer: "Paytm Wallet",
+                heading: '25-500 Cashback on Paytm Wallet | Minimum order value 399 | Valid twice per user | Valid everyday'
+            }
+        ]
+
+        document.getElementById("payment_detail").innerHTML = ""
+        let payment_detail = document.getElementById("payment_detail")
+        let h1 = document.createElement("h1")
+        h1.innerText = "New Card"
+        payment_detail.append(h1)
+        data.forEach(({ offer, heading }) => {
+
+            let div = document.createElement("div")
+            div.setAttribute("class", "offer")
+            let img = document.createElement("img")
+            img.src = "https://www.licious.in/img/rebranding/offer.svg"
+            let div1 = document.createElement("div")
+            div1.setAttribute("class", "offer_first")
+            let p1 = document.createElement("p")
+            p1.style.color = "red"
+            p1.innerText = offer
+            div1.append(img, p1)
+            let p2 = document.createElement("p")
+            p2.innerText = heading
+            p2.setAttribute("class","offer_secund")
+            div.append(div1, p2)
+
+        //   let div3=document.createElement("div")
+        //      div3.style.border="2px  dashed #777777"
+
+            payment_detail.append(div)
+
+        });
+
+        let div4=document.createElement("div")
+        div4.setAttribute("id","card")
+        let input=document.createElement("INPUT")
+        input.setAttribute("id","input_card")
+        input.setAttribute("placeholder","enter you card number")
+         div4.append(input)
+        payment_detail.append(div4)
+       
+
+
+
+    }
+    credit()
+</script>
