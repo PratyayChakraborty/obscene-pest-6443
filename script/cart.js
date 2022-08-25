@@ -262,7 +262,9 @@ function bill(){
 function Total(){
      let t=0
      for(let i=0;i<cartdata.length;i++){
-          t+=(+cartdata[i].price*quntarr[i])}
+          t += (+cartdata[i].price * quntarr[i])
+     }
+     localStorage.setItem('total', t);
           return t
 }
 
