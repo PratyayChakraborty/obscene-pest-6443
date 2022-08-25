@@ -59,11 +59,17 @@ chikendata.map(function (e, index, array) {
 });
   wgt.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
   pri.append(price_tag, cuurency, price, strikePrice, addCart);
-  // btndiv.append(addCart)
+  btndiv.append(addToCart)
 
   main.append(img, name, des, wgt, pri);
   document.querySelector("#container").append(main);
 });
 
+let cartdata = [];
+function addToCart(e){
+  cartdata.push(e)
+  localStorage.getItem("cartdata", JSON.stringify(cartdata));
 
+  console.log(cartdata);
+    };
     
