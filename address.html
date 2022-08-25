@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Weather App</title>
+    <style>
+        body{
+           
+            display: flex;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.min-max, .weather {
+    font-size: 12pt;
+    font-weight: 600;
+    margin: auto;
+}
+.gmap_canvas{
+    margin-top: 5%;
+    margin-right:8%;
+}
+    </style>
+</head>
+<body>
+  
+        <div class="searchInputBox">
+            <input type="text" id="input-box" class="input-box" placeholder="Enter city name..." autocomplete="off">
+        </div>
+
+        
+        
+        
+   
+     <div class="gmap_canvas">
+                <iframe width="450" height="600" id="gmap_canvas" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        
+            </div>
+
+    <script>
+
+
+const searchInputBox = document.getElementById('input-box');
+
+// Event Listener Function on keypress
+searchInputBox.addEventListener('keypress', (event) => {
+    
+    if(event.keyCode == 13) {
+        console.log(searchInputBox.value);
+       
+         let url=`https://maps.google.com/maps?q=${searchInputBox.value}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+
+    document.querySelector(".gmap_canvas>iframe").src=url
+        
+    }
+
+});
+
+function getlocation() {
+    navigator.geolocation.getCurrentPosition(success);
+function success(pos) {
+  const crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+  getOnlocation(crd.latitude,crd.longitude)
+}
+
+}
+function getOnlocation(lat, lon) {
+url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f21e69d43a3b47c6d862db310d5ecf8f&units=metric`
+
+        fetch(url).then(function (res) {
+        
+            return res.json()
+        
+        })
+            .then(function (res) {
+                
+                console.log(res);
+                  let url=`https://maps.google.com/maps?q=${res.name}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+
+    document.querySelector(".gmap_canvas>iframe").src=url
+            })
+  
+}
+getlocation()
+    </script>
+</body>
+</html>
