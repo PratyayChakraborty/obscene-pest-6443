@@ -1,0 +1,45 @@
+#footer{
+    /* border: 1px solid blue; */
+    height: auto;
+    display: flex;
+    margin-left: 100PX;
+    margin-right: 100px;
+}
+#footer-logo > img{
+    width: 120px;
+    margin-left: 100px;
+}
+#footer-bottom{
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: smaller;
+    display: block;
+    text-align: center;
+}
+.footer-image{
+    width: 100px;
+}
+table > tr,td,th{
+    /* border: 1px solid black; */
+    padding: 5px;
+    font-size: 15px;
+}
+
+#city-list, #city-list > div{
+    margin: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 5px;
+}
+#city-list > div > a{
+    text-decoration: none;
+    color: black;
+    margin-top: 50px;
+}
+#footer-tabs{
+    margin: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}
