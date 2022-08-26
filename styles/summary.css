@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+
+    /* font-size: 8; */
+    box-sizing: border-box;
+}
+
+#summary-contr-con {
+    display: flex;
+}
+
+#summary-contr {
+    margin: 100px 10%;
+    padding: 30px 45px;
+    width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+
+}
+
+#sdt {
+    border: 1px solid rgb(255, 73, 104);
+    width: 300px;
+    text-align: center;
+    padding: 15px 30px;
+    margin: 10px;
+    color: rgb(255, 60, 93);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    /* font-weight: 400; */
+
+}
+
+#letpay {
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    color: gray;
+    font-size: 18px;
+}
+
+#cratsummary {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 10px;
+
+}
+
+.itembox {
+    display: grid;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    /* grid-template-columns: repeat(2,1fr); */
+}
+
+.itembox>div>div {
+    display: flex;
+    gap: 10px;
+    color: gray;
+    font-size: 12px;
+}
+
+.itembox>div>div>div {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+
+}
+
+.itembox>div>div>img {
+
+    width: 80px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#stpp {
+
+    z-index: 999999999999999;
+    position: fixed;
+    background: rgba(36, 35, 35, 0.5);
+    /* scroll:d; */
+    /* background-color: black; */
+    /* backdrop-filter: blur(0.5px); */
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    /* display: block; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* opacity: .1; */
+    display: none;
+
+}
+
+#stpp-uyt {
+    /* position: fixed; */
+
+    cursor: pointer;
+    width: 650px;
+    height: 250px;
+    gap: 30px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 130px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: gray;
+    top: 0;
+}
+
+#stpp>div>h3 {
+    display: flex;
+    gap: 30px;
+}
+
+#stpp>div>h3>span {
+    text-decoration: underline;
+    margin: 10px;
+
+}
+
+#stpp-uyt>button {
+    width: 120px;
+    padding: 10px 0px;
+    margin: 10px;
+    border: 1px solid rgb(212, 208, 208);
+    /* color: rgb(238, 25, 103) ;  */
+}
+
+#stpp-uyt>h2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 50;
+    font-size: 20px;
+    margin: 10px;
+    color: black;
+}
+
+#stpp-uyt>h2>span:last-child {
+    font-size: 15px;
+    color: gray;
+}
+
+#stpp-ld {
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    align-items: center;
+}
+
+#stpp-ld>h5 {
+    color: rgb(246, 61, 92);
+}
+
+#stpp-ld>button {
+    padding: 20px 50px;
+    border: none;
+
+    /* background-color: pink; */
+
+}
+
+#kidlp {
+    margin-left: 10px;
+}
+
+#letpay {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
