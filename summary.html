@@ -34,6 +34,10 @@
             padding: 15px 30px;
             margin: 10px;
             color: rgb(255, 60, 93);
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
             /* font-weight: 400; */
 
         }
@@ -74,41 +78,166 @@
             width: 80px;
             height: 60px;
             border-radius: 10px;
-            box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+            box-shadow: box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
-        #stpp{z-index: 9999999;
+    #stpp{
+    
+     z-index: 999999999999999;
      position: fixed;
-     background: rgba(255, 255, 255, 0.5);
-     
+     background: rgba(36, 35, 35, 0.5);
+        /* scroll:d; */
      /* background-color: black; */
      /* backdrop-filter: blur(0.5px); */
      width: 100%;
      height: 100vh;
      top: 0;
-    display: block;
+    /* display: block; */
+    /* position: fixed; */
+    /* top: 0; */
      /* opacity: .1; */
-     /* display: none; */
+     display: none;
      
         }
+        #stpp-uyt{
+            /* position: fixed; */
+            
+            cursor:pointer;
+            width: 650px;
+            height: 250px;
+            gap:30px;
+            background-color: white;
+            margin-top: 150px;
+            margin-left: 130px;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            color: gray;
+            top: 0;
+        }
+#stpp>div>h3{
+display: flex;
+gap: 30px;
+}
+#stpp>div>h3>span{
+    text-decoration: underline;
+    margin: 10px;
+    
+}
+#stpp-uyt>button{
+    width: 120px;
+    padding: 10px 0px;
+    margin: 10px;
+    border:1px solid rgb(212, 208, 208);
+    /* color: rgb(238, 25, 103) ;  */
+}
+
+#stpp-uyt>h2{
+    display: flex;
+    justify-content: space-between;
+    gap: 50;
+    font-size: 20px;
+    margin: 10px;
+    color: black;
+}
+#stpp-uyt>h2>span:last-child{
+    font-size: 15px;
+    color: gray;
+}
+#stpp-ld{
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    align-items: center;
+}
+#stpp-ld>h5{
+    color: rgb(246, 61, 92);
+}
+#stpp-ld>button{
+    padding:20px 50px;
+    border: none;
+
+    /* background-color: pink; */
+
+}
+#kidlp{
+    margin-left: 10px;
+}
+#letpay{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+}
     </style>
 </head>
 <body>
     <div id="stpp">
-        <div></div>
+        
     </div>
     <div id="summary-contr-con">
 <div id="summary-contr">
-<h3>1 Item Delivered Today (26 August) </h3>
-<div id="sdt"><h4> Select a Delivery Slot  ˅ </h4></div>
+<div id="kidlp"></div>
+<div id="sdt" onclick="sdt()"><h4> Select a Delivery Slot  </h4> <h3>˅ </h3></div>
 <div id="cratsummary">
 
 </div>
+
 <button id="letpay"><h3>Proceed to Payment</h3></button>
 </div>
 </div>
 </body>
 </html>
 <script>
+    const d = new Date();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+
+let month = months[d.getMonth()];
+let date=d.getDate();
+let day = days[d.getDay()];
+let nmonth,ndate,time="";
+let ddatearr=["Today",date,month]
+document.getElementById("kidlp").innerHTML=`<h3>1 Item Delivered ${ddatearr[0]} (${ddatearr[1]} ${ddatearr[2]}) </h3>`;
+if(month=="January"||month=="March"||month=="May"||month=="July"||month=="August"||month=="October"||month=="December"){
+if(date==31){
+nmonth=months[d.getMonth()+1]
+     ndate=1
+}
+else{
+    nmonth=months[d.getMonth()]
+     ndate=d.getDate()+1;;
+}
+}
+
+if(month=="April"||month=="June"||month=="September"||month=="November"){
+if(date==30){
+nmonth=months[d.getMonth()+1]
+     ndate=1
+}
+else{
+    nmonth=months[d.getMonth()]
+     ndate=d.getDate()+1;;
+}
+}
+if(month=="February"){
+    if(date==28&& +d.getYear()%4==1 ){
+        nmonth=months[d.getMonth()+1]
+     ndate=1
+    }
+    else if(idate==29&& +d.getYear()%4!==1 ){
+        nmonth=months[d.getMonth()+1]
+     ndate=1
+    }
+    else{
+    nmonth=months[d.getMonth()]
+     ndate=d.getDate()+1;;
+}
+}
+// console.log(typeof())
+// console.log(month)
+// console.log(day)
+// d.getTime();
+// console.log(date,day,month)
+// getDate(),getMonth()
     let data=[
   {
       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/11/prod_display_image/1631077587.2029--2021-09-0810:36:27--1818",
@@ -228,7 +357,7 @@
   },
 
 ]
-localStorage.setItem("cartdata", JSON.stringify(data));
+// localStorage.setItem("cartdata", JSON.stringify(data));
 var cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
 var placeadd = localStorage.getItem("placeadd") || "kolkata";
 let quntarr= JSON.parse(localStorage.getItem("quntarr")) ||[1,1,1,1,1,1];
@@ -263,4 +392,86 @@ cartdata.forEach(function(el,ind){
     samabox.append(samabox4);
     document.getElementById("cratsummary").append(samabox);
 });
+function sdt(){
+    document.getElementById("stpp").style.display="block"
+}
+document.getElementById("stpp").innerHTML=`
+<div id="stpp-uyt">
+            <h2><span>Select slot for Shipment ${cartdata.length} of 1</span> <span onclick="btncn()">X</span></h2>
+            <h3><span id="viy1" onclick="viy(id)">Today ${date} ${month}</span>    <span id="viy2" onclick="viy(id)">Tomorrow ${ndate} ${nmonth}</span></h3>
+            <button id="btn1111" onclick="btn1111()">8 AM - 11 AM</button>
+            <button id="btn2222" onclick="btn2222()">4 PM - 7 PM</button>
+            <div id="stpp-ld">
+                <h5 onclick="btncn()">CANCCLE</h5> 
+                <button id="spffp">SELECT & PROCEED</button>
+            </div>
+        </div>`
+        function viy(id){
+            // let id=document.getElementById("viy1");
+            ddatearr=[];
+            if(id=="viy1"){
+                document.getElementById(id).style.color="black";
+                document.getElementById("viy2").style.color="gray";
+            }else{
+                document.getElementById(id).style.color="black";
+                document.getElementById("viy1").style.color="gray";
+            }
+            let [a,b,c]=document.getElementById(id).innerText.split(" ")
+            ddatearr.push(a,b,c)
+            ddatearr.push("0")
+            console.log(ddatearr)
+            if(time!==""&&ddatearr[3]==0){
+                document.getElementById("spffp").addEventListener("click",chool)
+                 document.getElementById("spffp").style.backgroundColor="rgb(246, 61, 92)";
+            document.getElementById("spffp").style.color="white";
+            }
+            
+        }
+        function btncn(){
+            document.getElementById("stpp").style.display="none";
+        }
+        function btn1111(){
+            document.getElementById("btn1111").style.border="1px solid rgb(238, 25, 103)";
+            document.getElementById("btn1111").style.color="rgb(238, 25, 103)";
+            document.getElementById("btn2222").style.border="gray";
+            document.getElementById("btn2222").style.color="gray";
+            // document.getElementById("spffp").style.backgroundColor="rgb(246, 61, 92)";
+            // document.getElementById("spffp").style.color="white";
+             time=document.getElementById("btn1111").innerText;
+             console.log(time);
+            if(time!==""&&ddatearr[3]==0){
+                document.getElementById("spffp").addEventListener("click",chool)
+                 document.getElementById("spffp").style.backgroundColor="rgb(246, 61, 92)";
+            document.getElementById("spffp").style.color="white";
+            
+            }
+
+        }
+        function btn2222(){
+            document.getElementById("btn2222").style.border="1px solid rgb(238, 25, 103)";
+            document.getElementById("btn2222").style.color="rgb(238, 25, 103)";
+            document.getElementById("btn1111").style.border="gray";
+            document.getElementById("btn1111").style.color="gray";
+            time=document.getElementById("btn2222").innerText;
+            console.log(time,ddatearr);
+            if(time!==""&&ddatearr[3]==0){
+                document.getElementById("spffp").addEventListener("click",chool)
+                 document.getElementById("spffp").style.backgroundColor="rgb(246, 61, 92)";
+            document.getElementById("spffp").style.color="white";
+            }
+        
+        }
+        function chool(){
+        document.getElementById("kidlp").innerHTML=`<h3>1 Item Delivered ${ddatearr[0]} (${ddatearr[1]} ${ddatearr[2]}) </h3>`;
+        
+        document.querySelector("#sdt>h4").innerText=`${time}`;
+        document.getElementById("letpay").style.backgroundColor="rgb(246, 61, 92)";
+            document.getElementById("letpay").style.color="white";
+            document.getElementById("letpay").addEventListener("click",function(){window.location.href="payment.html" 
+            localStorage.setItem("dltim",time)
+            localStorage.setItem("ddatearr",JSON.stringify(ddatearr));
+        })
+        btncn()
+        
+        }
 </script>
