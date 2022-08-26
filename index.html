@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Lato&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="./style/navbar.css">
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -106,24 +107,55 @@
     </div>
 
     <!-- slider menu of products -->
-    <div class="slide-container">
-        <div class="slide-content">
-            <div class="card-wrapper">
-                <div class="card">
-                    <div class="image-content">
-                        <span class="overlay"></span>
+    <div id="slide-container-1">
+        <h2>Best Seller</h2>
+        <div id="slide-content-1">
 
-                        <div class="card-image">
-                            <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/4a8fa5ba-30e7-85eb-ddfe-7c2295f81aa9/original/kkkkkkkkkk.jpg?format=webp" alt="" class="card-img">
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis repellendus nostrum harum repellat necessitatibus amet in. Ut sint nulla suscipit!</p>
-                        <button>Add Cart</button>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+
+    <div id="slide-container-2">
+        <h2>Boneless Cuts</h2>
+        <div id="slide-content-2">
+
+        </div>
+    </div>
+
+
+    <!-- explore by category -->
+    <div class="category-container">
+        <h2>Explore by category</h2>
+        <div class="category-content">
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/6e4632bb-b664-3b17-9d68-10fab8cdfbd4/original/Eggs.png?format=webp" alt=""><h3>Eggs</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/8cd5f147-5466-1ae9-8886-3ac40256f1c7/original/RTC.png?format=webp" alt=""><h3>Ready to Cook</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/85c38154-50b0-d61b-cf39-c4a3ff5dd4f7/original/Chicken_(1).png?format=webp" alt=""><h3>Chicken</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/02337ccd-8109-c890-c9e9-226563158761/original/FIsh.png?format=webp" alt=""><h3>Fish & Seafood</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/9d609a50-3c06-2b15-5f84-5792e54d6788/original/Mu.png?format=webp" alt=""><h3>Mutton</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/28af2cf6-6ace-49b9-d976-4a1f454acec9/original/Prawn.png?format=webp" alt=""><h3>Prawns</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1d392d04-cbd8-694f-af12-df8fef2d309f/original/Coldcuts.png?format=webp" alt=""><h3>Cold Cuts</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/12a04930-95cc-73f5-fd3b-16a90ef5bad5/original/Spread_Bottle1.png?format=webp" alt=""><h3>Spreads</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/67879217-d0e3-42ff-c158-02b20074aa27/original/Biryani.png?format=webp" alt=""><h3>Biryani & Kebab</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/399f1295-122a-5e94-66e1-d605d35f60a0/original/Combo_(1).png?format=webp" alt=""><h3>Combos</h3></div>
+            <div><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a12c0ecb-81cc-c4b9-704b-6d2fc95c0c66/original/Ft_Collection_3_(1).png?format=webp" alt=""><h3>Featured Collections</h3></div>
+        </div>
+    </div>
+
+
+    <!-- breakfast & snacking specials section -->
+    <div id="slide-container-3">
+        <h2>Breakfast & Snacking Specials</h2>
+        <div id="slide-content-3"></div>
+
+    </div>
+
+    <!-- blog section -->
+    <h2 class="blog-head">Check out our blog</h2>
+    <div class="blog-section">
+        <div class="blog-content">
+            <div><img src="https://www.licious.in/blog/wp-content/uploads/2022/08/Shutterstock_1512002900.jpg" alt=""><h3>What's Spicy, Flavourful and Oh-So-Good? Chinese Dragon Chicken!</h3></div>
+            <div><img src="https://www.licious.in/blog/wp-content/uploads/2022/08/Shutterstock_1679883574.jpg" alt=""><h3>Explore the Realms of Asia With Thai Red Chicken Curry</h3></div>
+            <div><img src="https://www.licious.in/blog/wp-content/uploads/2022/08/Shutterstock_561626995.jpg" alt=""><h3>Make This Delectable Andhra Style Chicken Curry at Home!</h3></div>
+        </div> 
     </div>
 
     <!-- banner-add -->
@@ -163,6 +195,12 @@
 </body>
 </html>
 
+<script src="./data/bestSeller.js"></script>
+<script src="./data/bonelessCuts.js"></script>
+<script src="./data/breakfast&Snacking.js"></script>
+<script src="./script/index.js"></script>
+
+
 <script type="module">
     import navbar from './components/navbar.js';
     console.log('navbar:', navbar)
@@ -179,4 +217,4 @@
     container.innerHTML = footer();
 
 </script>
-<script src="./script/index.js"></script>
+

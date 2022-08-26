@@ -30,7 +30,7 @@ let span = document.getElementsByClassName('arrow');
 let div = document.getElementsByClassName('news-content');
 
 let len = 0;
-span[1].onclick = ()=>{
+span[0].onclick = ()=>{
     len++;
     for(let i of div)
     {
@@ -41,7 +41,7 @@ span[1].onclick = ()=>{
       if(len>3) {len=3;}
     }
 }
-span[0].onclick = ()=>{
+span[1].onclick = ()=>{
   len--;
   for(let i of div)
   {
@@ -52,3 +52,5 @@ span[0].onclick = ()=>{
     if(len<0) {len=0;}
   }
 }
+
+console.log("index page")
