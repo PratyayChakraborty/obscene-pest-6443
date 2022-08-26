@@ -67,6 +67,7 @@ rgb(149, 151, 153)
 </head>
 
 <body>
+    <input type="text" id="item" placeholder="Search Item" oninput="debounce(AppendFunc,1000)">
     <div id="heading">
         <h3>Shop by categories</h3>
         <p>Freshest meats just for you</p>
@@ -156,5 +157,29 @@ rgb(149, 151, 153)
     }
 
     displayData(searchData);
+let chicken;
+    let query = document.getElementById("item").value;
+    console.log(query);
+    function AppendFunc(query){
+        console.log(query);
+        if(query===chicken){
+            window.location.href="./searchResults.html"
+        }
+        //else{
+        //     alert("Search for the other category!");
+        // }
+
+    }
+    let id;
+    function debounce(func, delay) {
+        if (id) { //if id alreday present then clear it
+            clearTimeout(id);
+        }
+        id = setTimeout(function () {
+            func();
+        }, delay);
+    }
+
 
 </script>
+<script src="./chickenData.js"></script>
