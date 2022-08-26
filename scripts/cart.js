@@ -264,7 +264,7 @@ function Total(){
      for(let i=0;i<cartdata.length;i++){
           t += (+cartdata[i].price * quntarr[i])
      }
-     localStorage.setItem('total', t);
+     localStorage.setItem('total',t);
           return t
 }
 
