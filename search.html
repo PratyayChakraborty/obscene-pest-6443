@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./styles/search.css">
+<!--     
+    <link rel="stylesheet" href="./style/footer.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Search</title>
+    <style>
+        
+      
+    </style>
+</head>
+
+<body>
+     <!-- top navbar starting  -->
+
+     <div id="nav_container"></div>
+
+     <!-- body content -->
+     <div id="SearchParentBox">
+    <input type="text" id="item" placeholder="Search Item" oninput="debounce(AppendFunc,1000)">
+    <div id="heading">
+        <h3>Shop by categories</h3>
+        <p>Freshest meats just for you</p>
+
+    </div>
+   
+    <div id="searchDiv"></div>
+    
+    <!-- footer part start
+    <div id="footer_container"></div>
+
+    login slider start -->
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="./searchScripts/search.js"></script>
+<script src="./chickenData.js"></script>
+
+<script type="module">
+    import navbar from './components/navbar.js';
+    console.log('navbar:', navbar)
+
+    let container = document.getElementById('nav_container')
+
+    container.innerHTML = navbar();
+
+</script>
+<!-- <script type="module">
+    import footer from './components/footer.js';
+    
+    let container = document.getElementById('footer_container')
+    container.innerHTML = footer();
+
+</script> -->
