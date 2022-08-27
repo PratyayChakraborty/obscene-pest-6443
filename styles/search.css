@@ -56,3 +56,14 @@ rgb(149, 151, 153)
     cursor: pointer;
     color:red;
 }
+#item-lkfdk{
+position: fixed;
+top: 60px;
+left: 600px;
+width: 300px;
+height: 40px;
+
+}
+.search{
+    visibility: hidden;
+}

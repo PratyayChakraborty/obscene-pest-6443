@@ -1,125 +1,126 @@
-var cartdata=[
-  {
-      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/11/prod_display_image/1631077587.2029--2021-09-0810:36:27--1818",
-      name:"Chiken Curry Cut (Large pcs) - Large Pack",
-      des:"Half chiken cut to chunky pieces including Two leg a...",
-      net_tag:"Net wt",
-      net:"1000",
-      gross_tag:"Gross wt",
-       gross:"1026",
-       pieces_tag:"Pieces:",
-       pieces:"",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"318",
-      strikePrice:"335",
-      off:"5",
-      off_tag:"% OFF"
+//    let data=[
+//   {
+//       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/11/prod_display_image/1631077587.2029--2021-09-0810:36:27--1818",
+//       name:"Chiken Curry Cut (Large pcs) - Large Pack",
+//       des:"Half chiken cut to chunky pieces including Two leg a...",
+//       net_tag:"Net wt",
+//       net:"1000",
+//       gross_tag:"Gross wt",
+//        gross:"1026",
+//        pieces_tag:"Pieces:",
+//        pieces:"",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"318",
+//       strikePrice:"335",
+//       off:"5",
+//       off_tag:"% OFF"
 
-  },
-  {
-      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_3lyki5xft44/11/prod_display_image/1612636456.399--2021-02-0700:04:16--738",
-      name:"Eggs - Brown, Antibiotic Residue Free(Pack of 12",
-      des:"Brown shell eggs laid naturally by healthy hens",
-      net_tag:"Net wt",
-      net:"12",
-      gross_tag:"Gross wt",
-       gross:"500",
-       pieces_tag:"Pieces:",
-       pieces:"12",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"115",
-      strikePrice:"135",
-      off:"15",
-      off_tag:"% OFF"
+//   },
+//   {
+//       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_3lyki5xft44/11/prod_display_image/1612636456.399--2021-02-0700:04:16--738",
+//       name:"Eggs - Brown, Antibiotic Residue Free(Pack of 12",
+//       des:"Brown shell eggs laid naturally by healthy hens",
+//       net_tag:"Net wt",
+//       net:"12",
+//       gross_tag:"Gross wt",
+//        gross:"500",
+//        pieces_tag:"Pieces:",
+//        pieces:"12",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"115",
+//       strikePrice:"135",
+//       off:"15",
+//       off_tag:"% OFF"
 
-  },
-  {
-      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_4cyjya5ry5e/11/prod_display_image/1634636534.1399--2021-10-1915:12:14--1818?format=webp",
-      name:"Chunky Butter Chiken Spread",
-      des:"Mildly spiced chunks of freshly rosted chiken blended...",
-      net_tag:"Net wt",
-      net:"200",
-      gross_tag:"Gross wt",
-       gross:"200",
-       pieces_tag:"Pieces:",
-       pieces:"",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"149",
-      strikePrice:"199",
-      off:"25",
-      off_tag:"% OFF"
+//   },
+//   {
+//       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_4cyjya5ry5e/11/prod_display_image/1634636534.1399--2021-10-1915:12:14--1818?format=webp",
+//       name:"Chunky Butter Chiken Spread",
+//       des:"Mildly spiced chunks of freshly rosted chiken blended...",
+//       net_tag:"Net wt",
+//       net:"200",
+//       gross_tag:"Gross wt",
+//        gross:"200",
+//        pieces_tag:"Pieces:",
+//        pieces:"",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"149",
+//       strikePrice:"199",
+//       off:"25",
+//       off_tag:"% OFF"
 
-  },
-  {
-      imgUrl:"https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/6d8cefaa-06fa-494a-b67d-74a7f0d78387/original/Chunky-Shawarma-Chicken-Spread_(7).jpg?format=webp",
-      name:"Chunky Shawarma Chiken Spread",
-      des:"A creamy base with freshly rosted chiken chunks alon...",
-      net_tag:"Net wt",
-      net:"200",
-      gross_tag:"Gross wt",
-       gross:"200",
-       pieces_tag:"Pieces:",
-       pieces:"",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"149",
-      strikePrice:"",
-      off:"25",
-      off_tag:"% OFF"
+//   },
+//   {
+//       imgUrl:"https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/6d8cefaa-06fa-494a-b67d-74a7f0d78387/original/Chunky-Shawarma-Chicken-Spread_(7).jpg?format=webp",
+//       name:"Chunky Shawarma Chiken Spread",
+//       des:"A creamy base with freshly rosted chiken chunks alon...",
+//       net_tag:"Net wt",
+//       net:"200",
+//       gross_tag:"Gross wt",
+//        gross:"200",
+//        pieces_tag:"Pieces:",
+//        pieces:"",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"149",
+//       strikePrice:"",
+//       off:"25",
+//       off_tag:"% OFF"
 
 
-  },
-  {
-      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_7olkuhu3ohb/11/prod_display_image/1634748531.1979--2021-10-2022:18:51--1818",
-      name:"Lean Goat Curry Cut - Small Pieces",
-      des:"Trimmed bone-in & boneless pieces",
-      net_tag:"Net wt",
-      net:"450",
-      gross_tag:"Gross wt",
-       gross:"979",
-       pieces_tag:"Pieces:",
-       pieces:"",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"537",
-      strikePrice:"565",
-      off:"5",
-      off_tag:"% OFF"
+//   },
+//   {
+//       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_7olkuhu3ohb/11/prod_display_image/1634748531.1979--2021-10-2022:18:51--1818",
+//       name:"Lean Goat Curry Cut - Small Pieces",
+//       des:"Trimmed bone-in & boneless pieces",
+//       net_tag:"Net wt",
+//       net:"450",
+//       gross_tag:"Gross wt",
+//        gross:"979",
+//        pieces_tag:"Pieces:",
+//        pieces:"",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"537",
+//       strikePrice:"565",
+//       off:"5",
+//       off_tag:"% OFF"
 
-  },
+//   },
   
-  {
-      imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_1qzjxbz6jmj/11/prod_display_image/1636909667.0048--2021-11-1422:37:47--1818?format=webp",
-      name:"Indian salmon(Rawas/Gurjali) - boneless Cubes",
-      des:"Boneless cubes of omega 3 rich, low fat, white fleshed...",
-      net_tag:"Net wt",
-      net:"300",
-      gross_tag:"Gross wt",
-       gross:"900",
-       pieces_tag:"Pieces:",
-       pieces:"",
-       unit:"gms",
-       price_tag:"MRP:",
-       currency:"₹",
-      price:"620",
-      strikePrice:"729",
-      off:"15",
-      off_tag:"% OFF"
+//   {
+//       imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_1qzjxbz6jmj/11/prod_display_image/1636909667.0048--2021-11-1422:37:47--1818?format=webp",
+//       name:"Indian salmon(Rawas/Gurjali) - boneless Cubes",
+//       des:"Boneless cubes of omega 3 rich, low fat, white fleshed...",
+//       net_tag:"Net wt",
+//       net:"300",
+//       gross_tag:"Gross wt",
+//        gross:"900",
+//        pieces_tag:"Pieces:",
+//        pieces:"",
+//        unit:"gms",
+//        price_tag:"MRP:",
+//        currency:"₹",
+//       price:"620",
+//       strikePrice:"729",
+//       off:"15",
+//       off_tag:"% OFF"
 
-  },
+//   },
 
-]
+// ]
+// localStorage.setItem("cartdata", JSON.stringify(data));
 //  cartdata=[];
 // localStorage.setItem("placeadd", undefined);
-// var cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
+var cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
 var placeadd = localStorage.getItem("placeadd") || " ";
 let quntarr= JSON.parse(localStorage.getItem("quntarr")) ||[];
 let popcon=document.getElementById("popup-screen");
@@ -192,7 +193,7 @@ item+= `<div id="order-item">
                          <div id="order-summary2">
                               <div id="item-detail">
                                    <div id="item-weight">${el.gross} ${el.unit}</div>
-                                   <div id="item-price">${el.currency} ${el.price}</div>
+                                   <div id="item-price">₹ ${el.price}</div>
                               </div>
                          <div id="qut">
                          <div id="add-qut" onclick="addqun(${quntarr,ind})" class="somke">+</div>
@@ -214,6 +215,8 @@ function addqun(ind){
 quntarr[ind]++
 // console.log(quntarr,ind)
 localStorage.setItem("quntarr",JSON.stringify(quntarr));
+
+
 slidorder() 
 }
 function subqun(ind){
@@ -226,8 +229,9 @@ slidorder()
 }
 function delpro(ind){
      cartdata.splice(ind,1);
-     quntarr.splice(ind,1);
-     
+     quntarr.splice(ind, 1);
+     localStorage.setItem("quntarr",JSON.stringify(quntarr));
+     localStorage.setItem("cartdata",JSON.stringify(cartdata));
     slidorder() 
 }
 function bill(){
@@ -295,13 +299,13 @@ function cggg(total) {
 }
 function letsgo() {
      // console.log("Please wait...");
-     window.location.href = "./checkout.html"
+     window.location.href = "./summary.html"
 }
 
 function kkkcross() {
      document.getElementById("popup-screen").style.display = "none";
 }
-document.getElementById("cartlogobtn").addEventListener("click", seecart)
-function seecart() { 
-     document.getElementById("popup-screen").style.display = "block";
-}
+// document.getElementById("cartlogobtn").addEventListener("click", seecart)
+// function seecart() { 
+//      document.getElementById("popup-screen").style.display = "block";
+// }

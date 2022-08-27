@@ -38,7 +38,7 @@ cuurency:"₹", price:"546", strikedPrice:"350"   , off:""     , off_tag:"%OFF"}
 // console.log('data:', bestSeller)
 
 
-
+// 
 
 append (bestSeller)
 // localStorage.setItem("super_saver_data",JSON.stringify(super_saver_data));
@@ -95,8 +95,10 @@ append (bestSeller)
     price.innerText = el.price;
 
     let button = document.createElement("button");
-    button.innerText = "ADD TO CART";
-
+      button.innerText = "ADD TO CART";
+button.id="addToCartbutton"
+  // document.getElementById("addToCartbutton").addEventListener("click", function () { addtoCartfunction(el)})
+button.addEventListener("click", function ( ){ addtoCartfunction(el)})
       box3.append(mrp, curr, price, button);
 
     box.append(img, name, des, box2, box3);
@@ -105,5 +107,22 @@ append (bestSeller)
 
     })
 }
-
-// console.log("data fetch");
+quntarr = JSON.parse(localStorage.getItem("quntarr"))||[];
+total=localStorage.getItem("total")||0;
+function addtoCartfunction(el) {
+  cartdata.push(el);
+  localStorage.setItem("cartdata", JSON.stringify(cartdata));
+  quntarr.push(1)
+  localStorage.setItem("quntarr", JSON.stringify(quntarr));
+  Total()
+  location.reload();
+}
+// let total=Total();
+function Total(){
+     let t=0
+     for(let i=0;i<cartdata.length;i++){
+          t += (+cartdata[i].price * quntarr[i])
+     }
+     localStorage.setItem('total',t);
+          return t
+}

@@ -48,6 +48,7 @@ select{
     border-radius: 5px;
     background-color: #f8f8f8;
     border: 1px solid #e4dede; */
+    outline: none;
     border: none;
     margin-left: 10px;
     overflow: visible;
@@ -141,4 +142,8 @@ select{
 .icons{
     font-size: 20px;
     display: inline-block;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

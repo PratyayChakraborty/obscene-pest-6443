@@ -9,11 +9,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/summary.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/navbar.css">
     <style>
         
     </style>
 </head>
 <body>
+    <div id="popup-screen">
+    <!-- <div id="cng"></div> -->
+</div>
+    <div id="nav_container"></div>
     <div id="stpp">
         
     </div>
@@ -41,6 +48,31 @@
             </div>
         </div>
 </div>
+ <div id="footer_container"></div>
 </body>
 </html>
 <script src="./scripts/summary.js"></script>
+<script src="./scripts/cart.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script type="module">
+   
+    import navbar from './components/navbar.js';
+
+    let container = document.getElementById('nav_container')
+    container.innerHTML = navbar();
+        document.getElementById("cartlogobtn").addEventListener("click",seecart)
+
+function seecart() { 
+     document.getElementById("popup-screen").style.display = "block";
+}
+
+// document.getElementById("cartlogobtn").style.display = "none";
+</script>
+<script type="module">
+    import footer from './components/footer.js';
+    
+    let container = document.getElementById('footer_container')
+    container.innerHTML = footer();
+
+</script>
