@@ -39,7 +39,7 @@ var chikendata = [
     {
     imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/11/prod_image/1631077952.5746--2021-09-0810:42:32--1818",
 
-    name:"Chicken Curry Cut (Small Pcs) - Large Pack",
+    name: "Chicken Curry Cut (Small Pcs)",
     des: "A combination of dark and white meat ",
     net_tag: "Net wt:",
     net: "1000",
@@ -144,7 +144,7 @@ var chikendata = [
   {
     imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_fmhkgtbdprx/11/prod_image/1631077251.0632--2021-09-0810:30:51--1818",
 
-    name: "Chicken Breast Boneless - Large Pack",
+    name: "Chicken Breast Boneless",
     des: "Chicken Breast is one of the meatier cuts of a Chicken,....",
 
     net_tag: "Net wt:",
@@ -196,9 +196,27 @@ var chikendata = [
     off: "15",
     off_tag: "%OFF",
   },
+  {
+    imgUrl:"https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_57234c427648b/11/prod_image/1574674666.5753--2019-11-2515:07:46--539?format=webp",
+
+    name:"Chicken Curry Cut (Large Pcs)",
+    des:"A mix of dark and white meat, our large Chicken Curry",
+    net_tag: "Net wt:",
+    net: "500",
+    gross_tag: "Gross:",
+    gross: "526",
+    unit: "gms",
+    price_tag: "MRP:",
+    cuurency: "₹",
+    price: "169",
+    strikePrice: "239",
+    off: "15",
+    off_tag: "%OFF",
+  },
 ];
 
-//   localStorage.setItem("chikendata",JSON.stringify(chikendata));
+  // localStorage.setItem("chikendata",JSON.stringify(chikendata));
+  
 
 
 console.log("chikendata", chikendata);
@@ -274,7 +292,7 @@ let cartdata = [];
 
 function addToCart(e){
   cartdata.push(e)
-  // localStorage.setItem("cartdata", JSON.stringify(cartdata));
+  localStorage.setItem("cartdata", JSON.stringify(cartdata));
   console.log(cartdata);
     };
     
