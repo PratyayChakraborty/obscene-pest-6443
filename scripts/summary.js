@@ -173,9 +173,9 @@ if(month=="February"){
 // addressarr
 var addressarr = JSON.parse(localStorage.getItem("addressarr")) ||[];
 var cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
-var placeadd = localStorage.getItem("placeadd") || "kolkata";
-let quntarr= JSON.parse(localStorage.getItem("quntarr")) ||[1,1,1,1,1,1];
-let total = localStorage.getItem('total') || 1180;
+var placeadd = localStorage.getItem("placeadd") || " ";
+let quntarr= JSON.parse(localStorage.getItem("quntarr")) ||[];
+let total = localStorage.getItem('total') || 0;
 document.getElementById("lots").innerText= `${placeadd}`
 cartdata.forEach(function(el,ind){
     let samabox=document.createElement("div");

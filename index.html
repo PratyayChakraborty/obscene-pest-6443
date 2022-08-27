@@ -9,18 +9,26 @@
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./styles/cart.css">
+     <link rel="stylesheet" href="./styles/login.css">
     <title>Index</title>
     <style>
         
     </style>
 </head>
 <body>
+   
+  <div id="login-pop">
+            
+        </div>
     <!-- top navbar starting  -->
-
+<div id="popup-screen">
+    <!-- <div id="cng"></div> -->
+</div>
     <div id="nav_container"></div>
 
     <!-- body content -->
-    <div class="slideshow-container">
+    <!-- <div class="slideshow-container"> -->
 
         <div class="mySlides fade">
           <img src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_62e142fbed5a8" style="width:100%">
@@ -220,7 +228,7 @@
     
 </body>
 </html>
-
+<script src="./scripts/cart.js"></script>
 <script src="./data/bestSeller.js"></script>
 <script src="./data/bonelessCuts.js"></script>
 <script src="./data/breakfast&Snacking.js"></script>
@@ -232,11 +240,32 @@
 
 
 <script type="module">
+   
     import navbar from './components/navbar.js';
+
+    
 
     let container = document.getElementById('nav_container')
     container.innerHTML = navbar();
+        document.getElementById("cartlogobtn").addEventListener("click",seecart)
 
+function seecart() { 
+     document.getElementById("popup-screen").style.display = "block";
+}
+document.getElementById("search").addEventListener("click", gosht)
+function gosht() { 
+  window.location.href="search.html"
+}
+if(localStorage.getItem("log")==true){
+    document.querySelector("#nagin>span").innerText="Profile";
+}
+document.getElementById("nagin").addEventListener("click", loginkar)
+function loginkar() {
+    document.getElementById("login-pop").style.display = "grid";
+    document.querySelector("#nagin>span").innerText="Profile";
+    localStorage.setItem("log",true);
+}
+// document.getElementById("cartlogobtn").style.display = "none";
 </script>
 <script type="module">
     import footer from './components/footer.js';
@@ -245,4 +274,6 @@
     container.innerHTML = footer();
 
 </script>
+
+<script src="./scripts/login.js"></script>
 

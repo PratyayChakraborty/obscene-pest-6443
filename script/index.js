@@ -54,3 +54,13 @@ span[1].onclick = ()=>{
     if(len<0) {len=0;}
   }
 }
+
+//  cartdata=JSON.parse(localStorage.getItem("cartdata"))|| [];
+// document.getElementById("addToCartbutton").addEventListener("click", function () { addtoCartfunction(el)})
+
+// function addtoCartfunction(el) {
+//   cartdata.push(el);
+//   localStorage.setItem("cartdata", JSON.stringify(cartdata));
+// }
+
+// cart js

@@ -76,7 +76,7 @@ let searchData = [
 let chicken;
     
     function AppendFunc(){
-        let query = document.getElementById("item").value;
+        let query = document.getElementById("item-lkfdk").value;
     console.log(query);
         console.log(query);
         if(query==="chicken"){
