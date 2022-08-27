@@ -62,7 +62,7 @@
         creadit.style.backgroundColor = "#fdf6f6";
         // border-left: 4px solid green;
         //creadit.style.opacity="1"
-
+let  total=localStorage.getItem("total");
 
         document.getElementById("payment_detail").innerHTML = ""
         let payment_detail = document.getElementById("payment_detail")
@@ -191,7 +191,7 @@
         let p = document.createElement("p")
         p.innerText = "Securely save card for future use"
         div6.append(input5, p)
-        let r = 239;
+        let r = `${total}`;
         let bottom = document.createElement("button")
         bottom.addEventListener("click", function () {
             payment()

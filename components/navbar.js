@@ -52,7 +52,9 @@ function navbar() {
                     </select>
     </div>
     <div class="search"><input type="text" placeholder="Search for any delicious product"  id="search" onClick="submit"><ion-icon class="search-icon" name="search-outline"></ion-icon></div>
+<div><a href="cat.html"><span><ion-icon class="icons" name="grid-outline"></ion-icon>Categories</span></a></div>
 
+    
 
     <div id="nagin"><span><ion-icon class="icons" name="person-outline"></ion-icon> Login</span></div>
 
@@ -60,6 +62,7 @@ function navbar() {
 </div>`;
     
 }
+
 
 export default navbar;
 

@@ -59,7 +59,3 @@ document.getElementById("letslogg").addEventListener("click",logpopsee)
 function logpopsee(){
     document.getElementById("login-pop").style.display="flex";
 }
-document.getElementById("login-popclo").addEventListener("click",clolog)
-function clolog(){
-    document.getElementById("login-pop").style.display="none";
-}

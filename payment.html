@@ -9,7 +9,8 @@
 
 
     <link rel="stylesheet" href="./style/payment.css">
-
+    <!-- <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/navbar.css"> -->
     <style>
         .change {
             color: red;
@@ -127,7 +128,8 @@
 </head>
 
 <body>
-    <h1> navar</h1>
+<div id="nav_container"></div>
+    
     <div id="payment">
         <div id="payment_option">
             <div id="payment_methord">
@@ -230,11 +232,11 @@
                                 <p>TOTAL</p>
                             </div>
                             <div>
-                                <p>239</p>
+                                <p id="puyyhs"></p>
                                 <p>0</p>
                                 <p>0</p>
                                 <p>0</p>
-                                <p>239</p>
+                                <p id="pyyhs">0</p>
 
 
                             </div>
@@ -246,13 +248,59 @@
         </div>
     </div>
 
-
+ <div id="footer_container"></div>
+ 
 </body>
 
 </html>
 <script src="./script/creadit.js"></script>
 <script src="./script/card_fun.js"></script>
 <script>
-
-
+    let total=localStorage.getItem("total")||0;
+    document.getElementById("puyyhs").innerText = total;
+    document.getElementById("pyyhs").innerText = total;
 </script>
+<!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+<script type="module">
+   
+    import navbar from './components/navbar.js';
+
+    
+
+    let container = document.getElementById('nav_container')
+    container.innerHTML = navbar();
+        document.getElementById("cartlogobtn").addEventListener("click",seecart)
+
+function seecart() { 
+     document.getElementById("popup-screen").style.display = "block";
+}
+document.getElementById("search").addEventListener("click", gosht)
+function gosht() { 
+  window.location.href="search.html"
+}
+if(localStorage.getItem("log")==true){
+    document.querySelector("#nagin>span").innerText="Profile";
+}
+document.getElementById("nagin").addEventListener("click", loginkar)
+function loginkar() {
+    document.getElementById("login-pop").style.display = "grid";
+    document.querySelector("#nagin>span").innerText="Profile";
+    localStorage.setItem("log",true);
+}
+document.getElementById("login-popclo").addEventListener("click",clolog)
+function clolog(){
+    document.getElementById("login-pop").style.display="none";
+}
+// document.getElementById("cartlogobtn").style.display = "none";
+</script>
+<script type="module">
+    import footer from './components/footer.js';
+    
+    let container = document.getElementById('footer_container')
+    container.innerHTML = footer();
+
+</script> -->

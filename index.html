@@ -222,7 +222,7 @@
 
     <!-- footer part start -->
     <div id="footer_container"></div>
-
+ 
     <!-- login slider start -->
     
     
@@ -234,6 +234,7 @@
 <script src="./data/breakfast&Snacking.js"></script>
 <script src="./script/index.js"></script>
 <script src="./script/slider.js"></script>
+
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -265,6 +266,10 @@ function loginkar() {
     document.getElementById("login-pop").style.display = "grid";
     document.querySelector("#nagin>span").innerText="Profile";
     localStorage.setItem("log",true);
+}
+document.getElementById("login-popclo").addEventListener("click",clolog)
+function clolog(){
+    document.getElementById("login-pop").style.display="none";
 }
 // document.getElementById("cartlogobtn").style.display = "none";
 </script>

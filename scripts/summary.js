@@ -44,6 +44,7 @@ if(month=="February"){
      ndate=d.getDate()+1;;
 }
 }
+
 // console.log(typeof())
 // console.log(month)
 // console.log(day)
@@ -176,37 +177,41 @@ var cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
 var placeadd = localStorage.getItem("placeadd") || " ";
 let quntarr= JSON.parse(localStorage.getItem("quntarr")) ||[];
 let total = localStorage.getItem('total') || 0;
-document.getElementById("lots").innerText= `${placeadd}`
-cartdata.forEach(function(el,ind){
-    let samabox=document.createElement("div");
-    let samabox1=document.createElement("div");
-    let samabox2=document.createElement("div");
-    let samabox3=document.createElement("div");
-    let samabox4=document.createElement("div");
-    samabox.className = "itembox";
-    let img=document.createElement("img");
-    img.src = el.imgUrl;
-    let name=document.createElement("h3");
-    name.innerText = el.name;
-    let wgt=document.createElement("p");
-    wgt.innerText=`${el.gross}gms`;
-    let prc=document.createElement("p")
-    prc.className="prc";
-    prc.innerText=`₹${el.price}`;
-    let qty=document.createElement("p")
-    qty.innerText=`qty: ${quntarr[ind]}`;
-    let cxxo=document.createElement("h3");
-    cxxo.innerText=`X`;
-    cxxo.addEventListener("click",function(e) {
-       delpro(ind)
-    })
-    samabox1.append(img,name);
-    samabox2.append(wgt,prc,qty);
-    samabox3.append(samabox2,cxxo);
-    samabox4.append(samabox1,samabox3);
-    samabox.append(samabox4);
-    document.getElementById("cratsummary").append(samabox);
-});
+document.getElementById("lots").innerText = `${placeadd}`;
+appsp() 
+function appsp() {
+    cartdata.forEach(function (el, ind) {
+        let samabox = document.createElement("div");
+        let samabox1 = document.createElement("div");
+        let samabox2 = document.createElement("div");
+        let samabox3 = document.createElement("div");
+        let samabox4 = document.createElement("div");
+        samabox.className = "itembox";
+        let img = document.createElement("img");
+        img.src = el.imgUrl;
+        let name = document.createElement("h3");
+        name.innerText = el.name;
+        let wgt = document.createElement("p");
+        wgt.innerText = `${el.gross}gms`;
+        let prc = document.createElement("p")
+        prc.className = "prc";
+        prc.innerText = `₹${el.price}`;
+        let qty = document.createElement("p")
+        qty.innerText = `qty: ${quntarr[ind]}`;
+        let cxxo = document.createElement("h3");
+        cxxo.innerText = `X`;
+        cxxo.addEventListener("click", function (e) {
+            delpro(ind)
+        })
+        samabox1.append(img, name);
+        samabox2.append(wgt, prc, qty);
+        samabox3.append(samabox2, cxxo);
+        samabox4.append(samabox1, samabox3);
+        samabox.append(samabox4);
+        document.getElementById("cratsummary").append(samabox);
+    });
+     
+}
 function sdt(){
     document.getElementById("stpp").style.display="block"
 }
@@ -290,3 +295,19 @@ document.getElementById("stpp").innerHTML=`
         
 }
         document.getElementById("lots").innerText = `${loca}, ${city}`;
+function delpro(ind){
+     cartdata.splice(ind,1);
+     quntarr.splice(ind, 1);
+     localStorage.setItem("quntarr",JSON.stringify(quntarr));
+     localStorage.setItem("cartdata",JSON.stringify(cartdata));
+Total()
+}
+function Total(){
+     let t=0
+     for(let i=0;i<cartdata.length;i++){
+          t += (+cartdata[i].price * quntarr[i])
+     }
+    localStorage.setItem('total', t);
+    appsp()
+    location.reload();
+}
