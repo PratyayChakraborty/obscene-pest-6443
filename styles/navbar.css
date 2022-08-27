@@ -39,9 +39,11 @@ select{
 #second-top-navbar > div{
     margin: auto;
 }
+
 #second-top-navbar > div:nth-child(1){
     margin-left: 100px;
 }
+
 #second-top-navbar > div > input{
     width: 350px;
     height: 35px;

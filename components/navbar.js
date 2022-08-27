@@ -53,7 +53,7 @@ function navbar() {
     </div>
     <div class="search"><input type="text" placeholder="Search for any delicious product"  id="search" onClick="submit"><ion-icon class="search-icon" name="search-outline"></ion-icon></div>
 
-    <div><span><ion-icon class="icons" name="grid-outline"></ion-icon>Categories</span></div>
+    <div><span><ion-icon class="icons" name="grid-outline"></ion-icon><a href="./cat.html">Categories</a></span></div>
 
     <div><span><ion-icon class="icons" name="person-outline"></ion-icon> Login</span></div>
 
