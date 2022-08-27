@@ -2,6 +2,7 @@
     let id;
     let id1;
     let id3;
+    let id4;
     credit = () => {
 
         let data = [
@@ -135,28 +136,45 @@
         div51.append(input1,p2)
 
         let div52 = document.createElement("div")
-        div52.setAttribute("class", "error_second")
+        div52.setAttribute("class", "error_yy")
         let input2 = document.createElement("INPUT")
         input2.setAttribute("id", "input_YYYY")
         input2.setAttribute("placeholder", "YYYY")
+        let p3=document.createElement("p")
+        p3.setAttribute("id","error_YYYY")
+        
         input2.addEventListener("input", () => {
             if (id3) {
                 clearTimeout(id3)
             }
             id3 = setTimeout(() => {
-              card__YYYY()
+             card_YYYY()
             }, 2000)
 
         })
-        let p3=document.createElement("p")
-        p3.setAttribute("id","error_sc")
+         
         div52.append(input2,p3)
 
-
+        let div53=document.createElement("div")
+        div53.setAttribute("id","error_cvv")
         let input3 = document.createElement("INPUT")
         input3.setAttribute("id", "input_cvv")
         input3.setAttribute("placeholder", "CVV")
-        div5.append(div51, input2, input3)
+        input3.setAttribute("type","password")
+        input3.addEventListener("input", () => {
+            if (id4) {
+                clearTimeout(id4)
+            }
+            id4 = setTimeout(() => {
+                card_cvv()
+            }, 2000)
+
+        })
+        let p4=document.createElement("p")
+        p4.setAttribute("id","error_cv")
+        div53.append(input3,p4)
+         
+        div5.append(div51, div52, div53)
 
         let input4 = document.createElement("INPUT")
         input4.setAttribute("class", "input_card")
@@ -176,6 +194,7 @@
         let bottom = document.createElement("button")
         bottom.addEventListener("click", function () {
             payment()
+            bottom.style.backgroundColor="#cbcbcb"
         })
         bottom.innerText = `Pay₹${r}`
 
