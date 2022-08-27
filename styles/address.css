@@ -1,0 +1,152 @@
+        body {
+
+            /* display: flex; */
+            background-color: whitesmoke;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+        #AddInputBox-con{
+            display: flex;
+            width: 1200px;
+            
+        }
+        #AddInputBox {
+            width: 700px;
+            height: 700px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            /* margin-left: 20%; */
+        }
+
+        #from {
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            width: 350px;
+            height: 700px;
+            position: absolute;
+            margin-top: 60px;
+            margin-left: 100px;
+            background-color: white;
+            gap: 20px;
+            padding: 10px 20px;
+            /* display: none; */
+
+
+        }
+
+        #from>input {
+            border: none;
+            height: 60px;
+            outline: none;
+            border-bottom: 1px solid gray;
+        }
+
+        .min-max,
+        .weather {
+            font-size: 12pt;
+            font-weight: 600;
+            margin: auto;
+
+        }
+
+        .gmap_canvas {
+            margin-top: 60px;
+            margin-left: 100px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        #save {
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: gray;
+            /* background-color: rgb(253, 48, 82); */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #cnfm {
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            width: 350px;
+            height: 150px;
+            position: absolute;
+            margin-top: 600px;
+            margin-left: 150px;
+            background-color: white;
+            gap: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        #cnf {
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(213, 45, 101);
+            color: white;
+            border-radius: 10px;
+        }
+
+        #tri {
+            width: 0px;
+            height: 10px;
+            margin-top: 10%;
+            border-right: 0;
+            border-left: 30px solid white;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            /* background-color: white; */
+            /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+        }
+                  #imgad {
+                      width: 300px;
+                      height: 350px;
+                      margin-top: 8.5%;
+                      margin-left: 10px;
+                      display: flex;
+
+                      /* background-color: red; */
+                  }
+        
+                  #imgad>img {
+                      width: 35px;
+                      height: 80%;
+                  }
+                                  #hideimg {
+                                      display: grid;
+                                      grid-template-rows: 36% 39%;
+                                      width: 80%;
+                                      height: 80%;
+                                      margin-top: 12px;
+                                      background-color: whitesmoke;
+                                      padding: 10px;
+                                      /* line-height: 100px; */
+                
+                                  }
+                
+                                  #hideimg>h3 {
+                                      margin: 0;
+                                      /* border: 1px solid ; */
+                                  }
+                
+                                  #hideimg>h3 {
+                                      margin: 0;
+                                      width: 100%;
+                                  }
+                
+                                  #lots {
+                                      font-size: 15px;
+                                  }
