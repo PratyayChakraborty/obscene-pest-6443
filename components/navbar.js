@@ -1,21 +1,26 @@
+// function submit(){
+//     console.log("manish");
+// }
+
 
 
 function navbar() {
     return `
     <div id="top-navbar">
-    <a href="#">Why Licious?</a>
+    <a href="#">Why Licious?<ion-icon name="ellipse" id="dot"></ion-icon></a>
     <a href="#">Download App</a>
     <img src="https://www.licious.in/img/rebranding/ios_app_icon.svg" alt="appstore-logo">
     <img src="https://www.licious.in/img/rebranding/android_app_icon.svg" alt="playstore-logo">
-    <a href="#" class="FSSC">FSSC 22000 Certification</a>
-    <a href="#">About Us</a>
-    <a href="#">Career @Licious</a>
-    <a href="#">Contact US</a>
+    <a href="#" class="FSSC">FSSC 22000 Certification <ion-icon name="ellipse" id="dot"></ion-icon></a>
+    <a href="#">About Us <ion-icon name="ellipse" id="dot"></ion-icon></a>
+    <a href="#">Career @Licious <ion-icon name="ellipse" id="dot"></ion-icon></a>
+    <a href="#">Contact US <ion-icon name="ellipse" id="dot"></ion-icon></a>
 </div>
 
 <div id="second-top-navbar">
     <div><a href="#"><img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="error"></a> </div>
     <div id="location-text">
+    <ion-icon class="icons" name="location-outline"></ion-icon>
         <p id="scity">Select City</p>
                     <select name="" id="location" onclick="showCities()">
                         <option value=""disabled selected hidden>Enter City</option>
@@ -46,10 +51,13 @@ function navbar() {
                         <option value="Palakkad">Palakkad</option>
                     </select>
     </div>
-    <div><input type="text" placeholder="Search for any delicious product"  id="search"></div>
-    <div><span>Categories</span></div>
-    <div><span>Login</span></div>
-    <div id="cartlogobtn"><span>Cart</span></div>
+    <div class="search"><input type="text" placeholder="Search for any delicious product"  id="search" onClick="submit"><ion-icon class="search-icon" name="search-outline"></ion-icon></div>
+
+    <div><span><ion-icon class="icons" name="grid-outline"></ion-icon>Categories</span></div>
+
+    <div><span><ion-icon class="icons" name="person-outline"></ion-icon> Login</span></div>
+
+    <div id="cartlogobtn"><span><ion-icon class="icons" name="cart-outline"></ion-icon> Cart</span></div>
 </div>`;
     
 }
