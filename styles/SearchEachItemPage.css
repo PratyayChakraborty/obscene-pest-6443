@@ -1,0 +1,460 @@
+
+        * {
+            max-width: 1400px;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Lato', sans-serif;
+
+        }
+        /* main css scetion starts here */
+
+        #MainBodyBox{
+            background-color: whitesmoke;
+            padding-top:30px;
+        }
+
+        #Licious_section {
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            /* border:1px solid teal; */
+            background-color:
+                rgb(255, 255, 255);
+            margin: 70px 0px 50px 0px;
+        }
+
+        #Recommended {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            justify-content: space-between;
+            text-align: center;
+
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 40px;
+            background-color:
+                rgb(255, 255, 255);
+        }
+
+        #Recommended>div {
+            /* border:1px solid red; */
+            width: 160px;
+            height: auto;
+        }
+
+        #Recommended>div>img {
+            width: 120px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        #Recommended>div>img+p {
+            font-size: 12px;
+            color:
+                rgb(85, 85, 85);
+            font-weight: 700;
+        }
+    
+        #Front-Section {
+            width: 100%;
+        }
+
+        #top_section {
+            display: flex;
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px 50px 60px 20px;
+        }
+
+        #top_section>div {
+            width: 50%;
+            /* border: 1px solid green; */
+            justify-content: space-between;
+            /* margin-right:80px; */
+        }
+
+        #top_section>div>img {
+            width: 100%;
+            height: 90%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        #textDes {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .click {
+            width: 190px;
+            height: auto;
+            /* border:1px solid teal; */
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        .click>div {
+            width: 50%;
+            /* border: 1px solid black; */
+            margin-right: 10px;
+
+        }
+
+        .click>div>img {
+            width: 100%;
+        }
+
+        #description {
+            margin-right: 120px;
+            /* font-family: 'Poppins', sans-serif; */
+            margin-left: 80px;
+            margin-right: 0px;
+
+        }
+
+        #description>h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        h1+h1 {
+            font-size: 36px;
+            margin-top: -30px;
+        }
+
+        #btn1 {
+            padding: 10px 15px;
+            font-size: 12px;
+            color: white;
+            background-color:
+                rgb(209, 18, 67);
+            border-radius: 5px;
+            /* justify-content: flex-end; */
+            border: none;
+
+        }
+
+        #btn2 {
+            padding: 15px 130px;
+            width: 95%;
+            /* font-family: 'Poppins', sans-serif; */
+            color: white;
+            background-color:
+                #ff7451;
+            border-radius: 25px;
+            justify-content: flex-start;
+            border: none;
+            margin-top: 15px;
+            margin-bottom: 30px;
+
+        }
+        .capsules {
+            font-size: 12px;
+            width: 100%;
+            height: auto;
+            /* border:1px solid red; */
+            border-radius: 5px;
+            border: 1px solid rgb(167, 162, 162);
+            padding: 15px 30px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+
+        .capsules1,
+        .capsules2 {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        hr {
+            width: 100%;
+            margin: 10px 0px;
+        }
+
+        .cartCounter {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #counter {
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 25px;
+            line-height: 20px;
+            font-weight: 500;
+            padding: 15px 0px;
+            border-radius: 30px;
+            background-color: #f8f8f8;
+            margin-right: 20px;
+        }
+
+        #reduce_price,
+        #increase_price {
+            cursor: pointer;
+        }
+
+        #path {
+            height: 30px;
+            width: 100%;
+            background-color: #f7f8fa;
+        }
+
+        span>img {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+
+        .refermain {
+            display: flex;
+            /* margin-left:100px; */
+            font-weight: 100;
+            font-size: 14px;
+            margin: 10px 0px 40px 100px;
+        }
+    
+        #chicken {
+            margin-right: 5px;
+        }
+
+        .refermain:hover {
+            color:
+                rgb(209, 18, 67);
+        }
+
+        #chicken:hover {
+            color:
+                rgb(209, 18, 67);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #chickenHead {
+            color:
+                rgb(209, 18, 67);
+        }
+    
+        /* NOTE::::Need to add CSS here */
+        /* * {
+            font-family: Lato;
+
+        }
+
+        body {
+            background-color: whitesmoke;
+        }
+
+        #chickenContainer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+            margin-left: 10px;
+            width: 80%;
+            margin: auto;
+            border: 1px solid green;
+        }
+
+
+        .main {
+            width: 88%;
+            height: 350px;
+            /* border: 1px solid green; */
+            /* justify-content: space-evenly;
+            border-radius: 10px; */
+            /* margin-left: 50px; */
+            /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 100%;
+            height: 200px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        } */
+
+        /* h4 {
+            margin-left: 5px;
+            margin-top: -2px;
+            white-space: wrap;
+            width: 300px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #000000;
+        } */
+
+        /* h4:hover{
+        overflow: visible;
+    } */
+
+        /* .des {
+            margin-left: 5px;
+            margin-top: -6px;
+            font-size: 13px;
+            white-space: nowrap;
+            width: 300px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        } */
+
+        /* .hold{
+        display: flex;
+        justify-content: space-between;
+    } */
+        /* .wgt {
+            margin-left: 5px;
+            margin-top: -28px;
+            display: flex;
+            color: rgb(56, 55, 55);
+        }
+
+        h6 {
+            font-size: 13px;
+        }
+
+        .wgt :nth-child(1) {
+            margin-left: 1px;
+        }
+
+        .wgt :nth-child(2) {
+            margin-left: 5px;
+        }
+
+        .wgt :nth-child(3) {
+            margin-left: 1px;
+        }
+
+        .wgt :nth-child(4) {
+            margin-left: 10px;
+        }
+
+        .wgt :nth-child(5) {
+            margin-left: 5px;
+        }
+
+        .pri {
+            margin-left: 5px;
+            margin-top: -40px;
+            display: flex;
+            color: rgb(56, 55, 55);
+        }
+
+        .pri :nth-child(1) {
+            color: red;
+            font-size: 15px;
+        }
+
+        .pri :nth-child(2) {
+            margin-top: 25px;
+            margin-left: 5px;
+        }
+
+        .pri :nth-child(3) {
+            margin-top: 25px;
+        }
+
+        .pri :nth-child(4) {
+            margin-top: 23px;
+            margin-left: 10px;
+        }
+
+        .addcartbtn {
+            margin-left: 120px;
+            margin-top: 15px;
+            margin-right: 10px;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            background-color: crimson;
+            color: white;
+            font-size: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+        } */
+
+        /* refer */
+        /* .refermain {
+            display: flex;
+            margin-left: 150px;
+            font-weight: 900;
+            font-size: 15px;
+        } */
+
+        /* .refermain:hover {
+    color: red;
+  } */
+        /* #refhome>a:hover {
+            color: red;
+        }
+
+        a {
+
+            text-decoration: none;
+            color: black;
+
+        }
+
+       
+        #combohover {
+            color: red;
+        }
+
+        .head {
+            margin-left: 150px;
+            width: 77%;
+        }  */
+   
+        /* for small container CSS */
+        #smallContainer {
+            display: flex;
+            width: 80%;
+            height: 110px;
+            /* border:1px solid red; */
+            background-color: white;
+
+            padding: 10px 20px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .smallImg {
+            width: 130px;
+            height: 100%;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .small {
+            width: 50%;
+            margin-left: 250px;
+            /* border:1px solid rgb(126, 4, 4); */
+
+        }
+
+        .small1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .small2 {
+            display: flex;
+            justify-content: center;
+            color:
+                rgb(209, 18, 67);
+        }

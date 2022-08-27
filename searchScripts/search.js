@@ -1,87 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <title>Search</title>
-    <style>
-        *{
-            box-sizing: border-box;
-            margin:0px;
-            padding:0px;
-            background-color: 
-#f8f8f8;
-font-family: 'Lato', sans-serif;
-
-        }
-        #searchDiv{
-            width:65%;
-            display:grid;
-            grid-template-columns: repeat(4,1fr);
-            gap:23px;
-            justify-content: center;
-            align-items: center;
-            margin:auto;
-            margin-top:15px;
-            font-size: 14px;
-
-        }
-        .cardDiv{
-            /* border:1px solid teal; */
-            text-align: center;
-
-        }
-        img{
-            width:100%;
-            height:140px;
-            margin-bottom: 10px;
-        }
-        #heading{
-            width:65%;
-            margin: auto;
-        }
-        #heading h3{
-            font-size:24px ;
-            font-weight: 700;
-            margin-bottom: 7px;
-        }
-        #heading p{
-            font-size: 14px;
-            color:
-rgb(149, 151, 153)
-        }
-
-        /* .image:hover{
-            cursor: pointer;
-        } */
-        .cardDiv:hover{
-            cursor: pointer;
-            color:red;
-        }
-    </style>
-</head>
-
-<body>
-    <input type="text" id="item" placeholder="Search Item" oninput="debounce(AppendFunc,1000)">
-    <div id="heading">
-        <h3>Shop by categories</h3>
-        <p>Freshest meats just for you</p>
-
-    </div>
-   
-    <div id="searchDiv"></div>
-
-
-</body>
-
-</html>
-<script>
-    let searchData = [
+let searchData = [
     {
             name: "Today's Deals",
             url: "https://dao54xqhg9jfa.cloudfront.net/OMS-Category/d52759ea-ba5a-0f5b-3dc1-d28875335a3f/original/Todays_Deal_1.png",
@@ -155,19 +72,19 @@ rgb(149, 151, 153)
 
         });
     }
-
     displayData(searchData);
 let chicken;
-    let query = document.getElementById("item").value;
+    
+    function AppendFunc(){
+        let query = document.getElementById("item").value;
     console.log(query);
-    function AppendFunc(query){
         console.log(query);
-        if(query===chicken){
+        if(query==="chicken"){
             window.location.href="./searchResults.html"
         }
-        //else{
-        //     alert("Search for the other category!");
-        // }
+        else{
+            alert("Search category is available only for chicken!");
+        }
 
     }
     let id;
@@ -179,7 +96,3 @@ let chicken;
             func();
         }, delay);
     }
-
-
-</script>
-<script src="./chickenData.js"></script>
