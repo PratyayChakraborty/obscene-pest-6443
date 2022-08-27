@@ -9,6 +9,7 @@
 
 #summary-contr-con {
     display: flex;
+    gap: 0px;
 }
 #summary-contr-con>div{
     /* border: 1px solid; */
@@ -194,7 +195,7 @@
 #imgad {
     width: 300px;
     height: 350px;
-    margin-top: 10%;
+    margin-top: 8%;
     /* margin-left: 10px; */
     display: flex;
     background-color: whitesmoke;
