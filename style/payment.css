@@ -1,0 +1,411 @@
+
+    
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap");
+     html {
+         width: 1200px;
+         margin: auto;
+         background-color:#f7f6f6;
+
+     }
+
+     body {
+
+         font-family: "Lato";
+     }
+
+     #payment {
+         display: flex;
+         margin-top: 50px;
+
+
+     }
+
+     #payment_option {
+         width: 60%;
+         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+         border-radius: 10px;
+         margin: auto;
+         background-color: white;
+         display: flex;
+     }
+
+     #payment_proccese {
+         width: 38%;
+         /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        margin-left: 90px;
+        margin-top: 150px;
+       
+         
+     }
+
+     #payment_methord {
+         width: 25%;
+
+
+         text-align: center;
+
+
+     }
+
+     #payment_methord div {
+         border: 1px solid rgb(232, 232, 232);
+         height: 55px;
+         display: flex;
+         font-weight: 700;
+         padding-left: 10px;
+         align-items: center;
+
+
+
+     }
+
+     #payment_detail {
+         width: 70%;
+
+     }
+
+     .offer {
+         margin-left: 20px;
+         margin-top: -19px;
+
+     }
+
+     #payment_detail h1 {
+         margin-left: 20px;
+
+
+     }
+
+     .offer p:nth-child(1) {
+         margin-left: 20px;
+
+     }
+
+     .offer_first {
+         display: flex;
+         margin-bottom: 5px;
+
+     }
+
+     .offer_first img {
+         width: 17px;
+         height: 16px;
+         margin-top: 10px;
+
+     }
+
+     .offer_secund {
+         margin-left: 17px;
+         margin-top: -10px;
+         margin-bottom: 25px;
+         color: #777777;
+
+
+
+     }
+
+     #card {
+         margin-left: 18px;
+         font-size: 10px;
+
+         width: 440px;
+
+     }
+
+     .input_card {
+         border: 0;
+         outline: 0;
+         border-bottom: 2px solid red;
+         font-size: 15px;
+         width: 100%;
+         height: 50px;
+         padding-left: 20px;
+         margin-top: 20px;
+         margin-bottom: 30px;
+     }
+
+     #input_card {
+         border: 0;
+         outline: 0;
+         border-bottom: 2px solid red;
+         font-size: 15px;
+         width: 100%;
+         height: 50px;
+         padding-left: 20px;
+         margin-top: 20px;
+
+     }
+
+     #card_cc {
+
+         display: flex;
+
+         justify-content: space-between;
+         text-align: center;
+
+     }
+
+     #card_cc input {
+         border: 0;
+         outline: 0;
+         width: 105px;
+         border-bottom: 2px solid red;
+         margin-top: 20px;
+         padding-left: 20px;
+         height: 40px;
+
+     }
+
+     #card_cc input:nth-child(2) {
+         margin-left: 40px;
+         margin-right: 40px;
+     }
+
+     #box {
+         display: flex;
+         margin-left: 18px;
+         font-size: 20px;
+     }
+
+     #box input {
+
+         height: 50px;
+         width: 18px;
+
+     }
+
+     #box p {
+         display: flex;
+         font-size: 20px;
+         margin-left: 5px;
+     }
+
+     button {
+         background-color: #d11243;
+         color: white;
+         margin-left: 18px;
+         font-size: 20px;
+         border: 0;
+         margin-top: 20px;
+         text-align: center;
+         padding: 10px;
+         width: 150px;
+         margin-bottom: 40px;
+
+     }
+
+     #card p {
+         margin-bottom: 30px;
+     }
+
+     #payment_methord div:nth-child(1) {
+
+         /* background-color:  rgb(232, 232, 232); */
+         color: rgb(232, 232, 232);
+     }
+  
+    
+     #button {
+         transition: all .2s ease-in-out;
+         cursor: pointer;
+         width: 18px;
+         height: 18px;
+         border-radius: 18px;
+         background: #6d6e71;
+         display: inline-block;
+         position: absolute;
+
+         pointer-events: auto;
+     }
+
+     #choose {
+
+         font-weight: 900;
+         box-sizing: border-box;
+         color: black;
+         margin-top: -100px;
+
+         height: 6px;
+     }
+
+     #choose_d h1:nth-child(1) {
+         font-weight: 900;
+         box-sizing: border-box;
+         color: black;
+         margin-top: 90px;
+         height: 6px;
+     }
+
+     .address {
+
+         height: 20px;
+
+         font-size: 17px;
+         color: #6d6e71;
+         font-weight: 900;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+
+         width: 318.5px;
+         margin-left: 10px;
+         margin-top: -8px;
+
+     }
+
+     #address {
+         height: 20px;
+         font-size: 17px;
+         color: #6d6e71;
+         font-weight: 900;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         width: 318.5px;
+         margin-left: 10px;
+         margin-top: 30px;
+
+     }
+
+     #box_d {
+         background-color: rgb(249, 246, 246);
+         border: 1px dashed #D8D8D8;
+         width: 350px;
+         border-radius: 5px;
+         height: 100px;
+         margin-left: 30px;
+         background-color: #ffffff;
+         cursor: pointer;
+         text-align: -webkit-match-parent;
+
+     }
+
+     #box_write {
+         margin-top: -20px;
+
+     }
+
+     #box_write p {
+
+         margin-left: 20px;
+         height: 10px;
+         font-size: 10px;
+         color: #6d6e71;
+         font-weight: 600;
+         margin-top: 20px;
+         width: 250px;
+
+     }
+
+     #Contactless {
+         display: flex;
+         font-size: 10px;
+         color: black;
+         font-weight: 600;
+         margin-bottom: 10px;
+
+
+     }
+
+     #Contactless p:nth-child(3) {
+         margin-left: 150px;
+     }
+
+     #choose_p h1:nth-child(1) {
+         font-weight: 900;
+         box-sizing: border-box;
+         color: black;
+
+         height: 16px;
+         margin-top: -30px;
+     }
+
+     #choose_w {
+         font-weight: 900;
+         box-sizing: border-box;
+         color: black;
+
+         height: 16px;
+         margin-bottom: 30px;
+         margin-left: 10px;
+
+     }
+
+     #coupons {
+         width: 300px;
+
+         background-color: #ffffff;
+         width: 350px;
+         border-radius: 5px;
+         height: 60px;
+         margin-left: 30px;
+         font-size: 10px;
+         font-weight: 900;
+         margin-top: -10px;
+         cursor: pointer;
+        
+
+     }
+
+     #apply {
+         display: flex;
+         margin-top: -10px;
+
+         height: 20px;
+         width: 20px;
+         margin-left: 10px;
+     }
+
+     #coupons p:nth-child(1) {
+         align-items: center;
+         color: black;
+         padding-top: 10px;
+         width: 120px;
+
+         margin-left: 50px;
+
+     }
+
+     #coupons>p:nth-child(3) {
+         align-items: center;
+
+         margin-left: 50px;
+         width: 250px;
+         margin-top: -10px;
+         height: 15px;
+     }
+
+     #arrow {
+
+         margin-left: 270px;
+         font-weight: 900;
+         margin-top: -7px;
+     }
+  #wellet{
+     display: flex;
+     margin-bottom: 50px;
+     margin-left: 30px;
+      
+  }
+  #wallet_amount{
+     margin-left: 80px;
+     display: flex;
+  }
+  #bill{
+     display: flex;
+     width: 320px;
+     justify-content: space-between;
+     margin-left: 30px;
+     font-size: 15px;
+  }
+  #bill>div:nth-child(1) p:nth-child(4){
+     border: 0;
+     border-bottom: 1px solid #D8D8D8;
+      width: 320px;
+     padding-bottom: 5px;
+  }
+ 
+ 
+ 

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+
+
+    <link rel="stylesheet" href="./style/payment.css">
+
+    <style>
+        .change {
+            color: red;
+            font-size: small;
+            text-decoration: underline;
+        }
+ 
+        #payment_proccese{
+            display: flex;
+        }
+        #line{
+            border-left: 4px  solid green;
+            height: 255px;
+            margin-top: -74px;
+             padding-right: 10px;
+            
+        }
+        button {
+         background-color: #d11243;
+         color: white;
+         margin-left: 18px;
+         font-size: 20px;
+         border: 0;
+         margin-top: 20px;
+         text-align: center;
+         padding: 10px;
+         width: 150px;
+         margin-bottom: 40px;
+
+     }
+       
+    </style>
+
+</head>
+
+<body>
+    <h1> navar</h1>
+    <div id="payment">
+        <div id="payment_option">
+            <div id="payment_methord">
+                <div> Saved Payments</div>
+                <div> Paytam </div>
+                <div>Amazon Pay</div>
+                <div>Pay Using UPI</div>
+                <div id="creadit" onclick="credit()">Credit / Debit Cards</div>
+                <div>CRED pay</div>
+                <div>Sodexo Food Cards</div>
+                <div>Netbanking</div>
+                <div>Other wallets</div>
+                <div>Cash on Delivery </div>
+                <div>Pay Online on Delivery</div>
+            </div>
+            <div id="payment_detail">
+
+            </div>
+        </div>
+        <div id="payment_proccese">
+            <div>
+                <div>
+                    <h1 id="line"></h1>
+                </div>
+               <div>
+                <span class="rotete"></span>
+                <span></span>
+                <span></span>
+               </div>
+            </div>
+            <div>
+                <div id="choose">
+                    <h1> <span id="rotation"> </span> Choose Address <span class="change">change</span></h1>
+                    <p class="address">sidhi Appareddipalya, Indiranagar, Bengal</p>
+                </div>
+
+                <div id="choose_d">
+                    <h1>Delivery Summary<span class="change">Edit</span> </h1>
+                    <p id="address">1 Item will be delivered in 1 shipment</p>
+                    <div id="box_d">
+                        <div id="Contactless">
+                            <input type="checkbox">
+                            <p>Contactless Delivery</p>
+                            <p>details</p>
+                        </div>
+                        <div id="box_write">
+                            <p>Our Delivery Hero will check with you where they can drop off your order.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="choose_p">
+                    <h1>Payment Methods</h1>
+                    <p id="choose_w">You have no saved cards</p>
+                    <div id="coupons">
+                        <p> APPLY COUPONS</p>
+
+                        <div id="apply">
+                            <img src="	https://www.licious.in/img/rebranding/existing_user_coupon_icon.svg" alt="">
+                            <h1 id="arrow">&#8594</h1>
+                        </div>
+
+                        <p>Have a coupon code? Apply now</p>
+
+
+                    </div>
+                    <div id="wellet">
+                        <div>
+                            <p id="button"> <span></span></p>
+                        </div>
+                        <div id="wallet_amount">
+                            <p> Usable Licious Wallet</p>
+                            <p>00</p>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div>
+                            <h1>Bill Details</h1>
+                        </div>
+                        <div id="bill">
+                            <div>
+                                <p>Subtotal</p>
+                                <p>Delivery Charge</p>
+                                <p>Discount</p>
+                                <p>Licious Wallet</p>
+                                <p>TOTAL</p>
+                            </div>
+                            <div>
+                                <p>239</p>
+                                <p>0</p>
+                                <p>0</p>
+                                <p>0</p>
+                                <p>239</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+</body>
+
+</html>
+<script src="./script/creadit.js"></script>
+<script src="./script/card_fun.js"></script>
+<script>
+
+
+</script>
