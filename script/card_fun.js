@@ -93,7 +93,22 @@
          let p4=document.getElementById("error_cv")
  
      if( input2 && input3 &&input4 &&input5!==null ){
-     
+        console.log('pav')
+        setTimeout(() => {
+            document.querySelector("body").innerHTML=""
+            let div=document.createElement("div")
+            let img=document.createElement("img")
+             img.src='./img/PAY.png'
+            img.style.width="100%"
+           img.style.height="100%"
+          
+            
+            document.querySelector("body").append(img)
+       
+            
+        }, 2000);
+            
+    
  
           
      }else{

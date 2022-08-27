@@ -16,31 +16,112 @@
             font-size: small;
             text-decoration: underline;
         }
- 
-        #payment_proccese{
+
+        #payment_proccese {
             display: flex;
         }
-        #line{
-            border-left: 4px  solid green;
-            height: 255px;
-            margin-top: -74px;
-             padding-right: 10px;
+
+        #line {
+            border-left: 4px solid green;
+            height: 240px;
+            margin-top: -60px;
+            padding-right: 15px;
+
+        }
+ 
+        .rotete {
+
+            border: none;
+            border-radius: 50%;
+
+            margin-top: -110px;
+            background-color: #417505;
+            margin-left: -5px;
+            width: 18px;
             
         }
-        button {
-         background-color: #d11243;
-         color: white;
-         margin-left: 18px;
-         font-size: 20px;
-         border: 0;
-         margin-top: 20px;
-         text-align: center;
-         padding: 10px;
-         width: 150px;
-         margin-bottom: 40px;
+        #rotete_therd{
+            background-color: #417505;
+            width: 15px;
+            border-radius: 50%;
+         
+           
+            margin-left: -8px;
+            margin-top: 125px;
+            border: 3px solid white;
+        }
+        #rotete_secund{
+            background-color: #417505;
+            width: 18px;
+            border-radius: 50%;
+             
+          
+            margin-left: -05px;
+           
+            margin-top: 80px;
+        }
+        #rotete_first{
+            background-color: #417505;
+            width: 18px;
+            border-radius: 50%;
+         
+           margin-top: -270px;
+            margin-left: -05px;
+             
+           
+        }
+        #paytm >p{
+             margin-bottom: 30px;
+        }
+        #cred >p{
+             margin-bottom: 30px;
+            margin-left: -10px;
+             width: 180px;
+        }
+        #paytm_off{
+            display: block;
+            font-size: 5px;
+            margin-bottom: 10px;
+           
+            width: 200px;
+        }
+        #paytm_off>p{
+            font-size: 3px;
+            word-wrap: break-word;
+            margin-bottom: -40px;
+            color: red;
+             
+        }
+        #paytm_off>img{
+            font-size: 2px;
+            word-wrap: break-word;
+            margin-bottom: -40px;
+            color: red;
+            margin-left: -50px;
+        }
+        #cred_off>img{
+            font-size: 2px;
+            word-wrap: break-word;
+            margin-bottom: -40px;
+            color: red;
+            margin-left: -80px;
+        }
+        #cred_off>p{
+            font-size: 3px;
+            word-wrap: break-word;
+            margin-bottom: -40px;
+            color: red;
+        }
+        #cred_off{
+            display: block;
+            font-size: 5px;
+            margin-bottom: 10px;
+            
+           
+            width: 200px;
+        }
 
-     }
-       
+        
     </style>
 
 </head>
@@ -51,11 +132,24 @@
         <div id="payment_option">
             <div id="payment_methord">
                 <div> Saved Payments</div>
-                <div> Paytam </div>
+                <div id="paytm"> 
+                    <p> Paytm</p> 
+                     <div id="paytm_off">
+                        <img  src="https://www.licious.in/img/rebranding/offer.svg" alt="" srcset="">
+                        <p> Offers available</p>
+                     </div>
+                 
+                     </div>
                 <div>Amazon Pay</div>
                 <div>Pay Using UPI</div>
                 <div id="creadit" onclick="credit()">Credit / Debit Cards</div>
-                <div>CRED pay</div>
+                <div id="cred" >
+                  <p>Cred Pay</p>  
+                    <div id="cred_off"> 
+                    <img  src="https://www.licious.in/img/rebranding/offer.svg" alt="" srcset="">
+                    <p> Offers available</p>
+                      </div>
+                </div>
                 <div>Sodexo Food Cards</div>
                 <div>Netbanking</div>
                 <div>Other wallets</div>
@@ -70,12 +164,11 @@
             <div>
                 <div>
                     <h1 id="line"></h1>
+                    <p   id="rotete_first">r</p>
+                    <p   id="rotete_secund">r</p>
+                    <p  id="rotete_therd">r</p>
                 </div>
-               <div>
-                <span class="rotete"></span>
-                <span></span>
-                <span></span>
-               </div>
+
             </div>
             <div>
                 <div id="choose">
@@ -90,7 +183,7 @@
                         <div id="Contactless">
                             <input type="checkbox">
                             <p>Contactless Delivery</p>
-                            <p>details</p>
+                            <p style="color: red ;" style="text-decoration: underline";>details</p>
                         </div>
                         <div id="box_write">
                             <p>Our Delivery Hero will check with you where they can drop off your order.</p>
@@ -151,7 +244,7 @@
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 
 
 </body>
