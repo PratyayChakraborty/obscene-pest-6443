@@ -10,13 +10,16 @@
 #summary-contr-con {
     display: flex;
 }
-
+#summary-contr-con>div{
+    /* border: 1px solid; */
+}
 #summary-contr {
     margin: 100px 10%;
     padding: 30px 45px;
     width: 700px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
+    margin-right: 0px;
 
 }
 
@@ -175,4 +178,58 @@
     border: none;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 10px;
+}
+#tri {
+    width: 0px;
+    height: 10px;
+    margin-top: 10%;
+    border-right: 0;
+    border-left: 30px solid white;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    /* background-color: white; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+#imgad {
+    width: 300px;
+    height: 350px;
+    margin-top: 10%;
+    /* margin-left: 10px; */
+    display: flex;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    /* background-color: red; */
+}
+
+#imgad>img {
+    width: 38px;
+    height: 80%;
+}
+
+#hideimg {
+    display: grid;
+    grid-template-rows: 36% 39%;
+    width: 80%;
+    height: 90%;
+    margin-top: 12px;
+    background-color: whitesmoke;
+    padding: 10px;
+    /* line-height: 100px; */
+
+}
+
+#hideimg>h3 {
+    margin: 0;
+    /* border: 1px solid ; */
+}
+
+#hideimg>h3 {
+    margin: 0;
+    width: 100%;
+}
+
+#lots {
+    font-size: 15px;
 }
