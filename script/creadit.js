@@ -59,7 +59,8 @@
 
         let creadit = document.getElementById("creadit")
         creadit.style.color = "red";
-        creadit.style.backgroundColor = "#fdf6f6"
+        creadit.style.backgroundColor = "#fdf6f6";
+        // border-left: 4px solid green;
         //creadit.style.opacity="1"
 
 

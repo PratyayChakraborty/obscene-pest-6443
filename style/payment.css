@@ -4,7 +4,7 @@
 
     @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap");
      html {
-         width: 1200px;
+         width: 1300px;
          margin: auto;
          background-color:#f7f6f6;
 
@@ -42,24 +42,37 @@
 
      #payment_methord {
          width: 25%;
+       text-align: center;
 
-
-         text-align: center;
 
 
      }
 
+     
      #payment_methord div {
-         border: 1px solid rgb(232, 232, 232);
-         height: 55px;
-         display: flex;
-         font-weight: 700;
-         padding-left: 10px;
-         align-items: center;
+        
+        height: 65px;
+        display: flex;
+        
+        padding-left: 10px;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
 
 
+    }
+    #payment_methord>div {
+        border: 1px solid rgb(232, 232, 232);
+        height: 65px;
+        display: flex;
+        
+        padding-left: 10px;
+        align-items: center;
+        font-size: 16px;
+        font-weight: bold;
 
-     }
+
+    }
 
      #payment_detail {
          width: 70%;
@@ -86,14 +99,16 @@
      .offer_first {
          display: flex;
          margin-bottom: 5px;
+         font-size: 15px;
+         font-weight: bold;
 
      }
 
      .offer_first img {
          width: 17px;
          height: 16px;
-         margin-top: 10px;
-
+         margin-top: 16px;
+         
      }
 
      .offer_secund {
@@ -101,6 +116,8 @@
          margin-top: -10px;
          margin-bottom: 25px;
          color: #777777;
+         font-size: 15px;
+         font-weight: bold;
 
 
 
@@ -167,6 +184,8 @@
          display: flex;
          margin-left: 18px;
          font-size: 20px;
+          
+         font-weight: bold;
      }
 
      #box input {
@@ -200,7 +219,7 @@
          margin-bottom: 30px;
      }
 
-     #payment_methord div:nth-child(1) {
+     #payment_methord>div:nth-child(1) {
 
          /* background-color:  rgb(232, 232, 232); */
          color: rgb(232, 232, 232);
@@ -392,6 +411,9 @@
   #wallet_amount{
      margin-left: 80px;
      display: flex;
+     font-size: 15px;
+     font-weight: bold;
+     
   }
   #bill{
      display: flex;
@@ -399,6 +421,8 @@
      justify-content: space-between;
      margin-left: 30px;
      font-size: 15px;
+     
+     font-weight: bold;
   }
   #bill>div:nth-child(1) p:nth-child(4){
      border: 0;
