@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+#login-pop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(65, 63, 63, 0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    display: none;
+}
+
+#lggsjd {
+    width: 430px;
+    height: 100%;
+    background-color: white;
+    background-image: url("https://www.licious.in//img/rebranding/user-login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    display: grid;
+    /* justify-content: center; */
+    grid-template-rows: 15% 80%;
+}
+
+#lggsjd>h1>img {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 30px;
+
+
+    /* height: 100%; */
+}
+
+#login-form-uypt {
+    width: 94%;
+    height: 80%;
+    margin: auto;
+    margin-top: 230px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10% 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#login-pop>span {
+    font-size: 28px;
+    font-weight: 100;
+    font-weight: lighter;
+    position: fixed;
+    top: 20px;
+    color: white;
+    right: 20px;
+}
+
+#login-form-uypt>input {
+    height: 60px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+}
+
+#login-form-uypt>button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: rgb(196, 194, 194);
+}
+
+#login-form-uypt>p>span {
+    color: rgb(255, 112, 136);
+    /* color: rgb(245, 58, 89) */
+}
+
+#login-form-uypt>p {
+    font-size: 15px;
+}
+
+#login-form-uypt>#pto {
+    border-bottom: 1px solid rgb(255, 98, 125);
+    display: none;
+}
+
+.login-btnhgfjclass {
+    display: none;
+}
