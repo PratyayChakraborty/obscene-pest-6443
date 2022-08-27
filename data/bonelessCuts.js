@@ -36,6 +36,8 @@ append(muttondata);
 function append(data) {
     data.forEach(function (el){
         let box = document.createElement("div");
+        box.className = "slide-data-2";
+
         let name = document.createElement("h3");
         name.innerText = el.name;
 
@@ -51,13 +53,28 @@ function append(data) {
         let wet = document.createElement("h5");
         wet.innerText = el.net_tag;
 
+        let net = document.createElement('h5');
+        net.innerText = el.net;
+
         let gros = document.createElement("h5");
         gros.innerText = el.gross_tag
 
-        box2.append(wet,gros);
+        let gross = document.createElement("h5");
+        gross.innerText = el.gross;
+
+        let unit = document.createElement("h6");
+        unit.innerText = el.unit;
+
+            box2.append(wet, net, gros, gross, unit);
     
         let box3 = document.createElement("div");
         box3.style.display = "flex";
+
+        let mrp = document.createElement('h5');
+        mrp.innerText = el.price_tag;
+
+        let curr = document.createElement("h5");
+        curr.innerText = el.cuurency;
 
         let price = document.createElement("h5");
         price.innerText = el.price;
@@ -65,7 +82,7 @@ function append(data) {
         let button = document.createElement("button");
         button.innerText = "ADD TO CART";
 
-        box3.append(price, button);
+            box3.append(mrp, curr, price, button);
 
         box.append(img, name, des, box2, box3);
         document.getElementById("slide-content-2").append(box);

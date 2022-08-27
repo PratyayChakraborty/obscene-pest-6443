@@ -6,6 +6,9 @@ html{
     margin: 0px;
     padding: 0px;
 }
+select{
+    border: transparent;
+}
 #top-navbar{
     width: 100%;
     display: flex;

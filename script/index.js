@@ -25,6 +25,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+
 // new section javascript
 let span = document.getElementsByClassName('arrow');
 let div = document.getElementsByClassName('news-content');
@@ -52,5 +54,3 @@ span[1].onclick = ()=>{
     if(len<0) {len=0;}
   }
 }
-
-console.log("index page")

@@ -79,6 +79,8 @@ var breakfastdata = [
         data.forEach(function(el) {
         
         let box = document.createElement("div");
+        box.className = "slide-data-3";        
+
         let name = document.createElement("h5");
         name.innerText = el.name;
 
@@ -100,7 +102,13 @@ var breakfastdata = [
     let gros = document.createElement("h5");
     gros.innerText = el.gross_tag
 
-    box2.append(wet, netWet, gros);
+    let gross = document.createElement("h5");
+    gross.innerText = el.gross;
+
+    let unit = document.createElement("h6");
+    unit.innerText = el.unit;
+
+    box2.append(wet, netWet, gros, gross, unit);
     
     let box3 = document.createElement("div");
     box3.style.display = "flex";
@@ -108,13 +116,16 @@ var breakfastdata = [
     let mrp = document.createElement("h5");
     mrp.innerText = el.price_tag;
 
+    let curr = document.createElement("h5");
+    curr.innerText = el.cuurency;
+
     let price = document.createElement("h5");
     price.innerText = el.price;
 
     let button = document.createElement("button");
     button.innerText = "ADD TO CART";
 
-    box3.append(mrp, price, button);
+    box3.append(mrp, curr, price, button);
 
     box.append(img, name, des, box2, box3);
 

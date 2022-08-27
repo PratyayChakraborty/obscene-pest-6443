@@ -109,16 +109,26 @@
     <!-- slider menu of products -->
     <div id="slide-container-1">
         <h2>Best Seller</h2>
-        <div id="slide-content-1">
+        <span id="arrow-1" class="arrow-1" >&#155;</span>
+        <span id="arrow-1" class="arrow-1">&#139;</span>
+        <section id="slide-div-1">
+            <div id="slide-content-1">
 
-        </div>
+            </div>
+        </section>
+            
     </div>
 
     <div id="slide-container-2">
         <h2>Boneless Cuts</h2>
-        <div id="slide-content-2">
-
-        </div>
+        <span id="arrow-2" class="arrow-2">&#155;</span>
+        <span id="arrow-2" class="arrow-2">&#139;</span>
+        <section id="slide-div-2">
+            <div id="slide-content-2">
+                
+            </div>
+        </section>
+        
     </div>
 
 
@@ -144,8 +154,13 @@
     <!-- breakfast & snacking specials section -->
     <div id="slide-container-3">
         <h2>Breakfast & Snacking Specials</h2>
-        <div id="slide-content-3"></div>
+        <span id="arrow-3" class="arrow-3">&#155;</span>
+        <span id="arrow-3" class="arrow-3">&#139;</span>
+        <section id="slide-div-3">
+            <div id="slide-content-3">
 
+            </div>
+        </section>
     </div>
 
     <!-- blog section -->
@@ -199,14 +214,13 @@
 <script src="./data/bonelessCuts.js"></script>
 <script src="./data/breakfast&Snacking.js"></script>
 <script src="./script/index.js"></script>
+<script src="./script/slider.js"></script>
 
 
 <script type="module">
     import navbar from './components/navbar.js';
-    console.log('navbar:', navbar)
 
     let container = document.getElementById('nav_container')
-
     container.innerHTML = navbar();
 
 </script>
