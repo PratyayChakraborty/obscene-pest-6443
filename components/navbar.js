@@ -18,7 +18,7 @@ function navbar() {
 </div>
 
 <div id="second-top-navbar">
-    <div><a href="#"><img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="error"></a> </div>
+    <div><a href="index.html"><img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="error"></a> </div>
     <div id="location-text">
     <ion-icon class="icons" name="location-outline"></ion-icon>
         <p id="scity">Select City</p>
