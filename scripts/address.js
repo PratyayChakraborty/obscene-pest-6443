@@ -29,7 +29,7 @@ function getOnlocation(lat, lon) {
                     })
 
             }
-
+let addressarr;
 let save = document.getElementById('save');
 let loca=document.getElementById("input-box").value;
 let flat=document.getElementById("flat").value;
@@ -75,11 +75,12 @@ async function savefun(e){
  city=document.getElementById("city").value;
  mob=document.getElementById("mobile").value;
  let nad=await new addobj(loca,flat,mark,city,mob);
- let addressarr=[];
+  addressarr=[];
  console.log(nad)
  addressarr.push(nad);
 localStorage.setItem("placeadd",loca);
-localStorage.setItem("addressarr",JSON.stringify(addressarr));
+    localStorage.setItem("addressarr", JSON.stringify(addressarr));
+    document.getElementById("lots").innerText = `${loca}, ${city}`;
 // localStorage.setItem("addressarr",JSON.stringify(addressarr));
 // console.log(city.length,(loca.length>0&& flat.length>0&& city.length>0&&mob.length==10));
 // if(loca.length>0&& flat.length>0&&city.length>0&&mob.length==10){ 
@@ -91,6 +92,7 @@ localStorage.setItem("addressarr",JSON.stringify(addressarr));
     document.querySelector(".gmap_canvas>iframe").src = url
 // }
 }
+console.log(addressarr)
 function addobj(loca,flat,mark,city,mob){
     this.location=loca;
     this.flat=flat;
