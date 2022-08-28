@@ -139,7 +139,7 @@ document.getElementById("cartlogobtn").addEventListener("click",seecart)
 function seecart() { 
      document.getElementById("popup-screen").style.display = "block";
 }
-let t=localStorage.getItem("total");
+let t=localStorage.getItem("total")||0;
 let c=JSON.parse(localStorage.getItem("cartdata"))||[];
   console.log(c)
   // cartdata =JSON.stringify( localStorage.getItem("cartdata"))||[];

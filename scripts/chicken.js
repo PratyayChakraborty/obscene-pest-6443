@@ -218,7 +218,7 @@ var chikendata = [
   // localStorage.setItem("chikendata",JSON.stringify(chikendata));
    let cartdata = JSON.parse(localStorage.getItem("cartdata")) || [];
 let quntarr = JSON.parse(localStorage.getItem("quntarr")) || [];
-let total =localStorage.getItem("total") || 0;
+let total = localStorage.getItem("total") || 0;
 
 console.log("chikendata", chikendata);
 chikendata.map(function (e, index, array) {
@@ -308,12 +308,13 @@ function Total() {
   let t = 0;
   let c=0
      for(let i=0;i<cartdata.length;i++){
-       t += (+cartdata[i].price * quntarr[i]);
+       t += (+cartdata[i].price*quntarr[i]);
        c++
      }
   localStorage.setItem('total', t);
     // document.getElementById("item-quntinnav").innerText = c;
   document.getElementById("item-totalinnav").innerText = t;
+  console.log("Total")
           return t
 
 }
