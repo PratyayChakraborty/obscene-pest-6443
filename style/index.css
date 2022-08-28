@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
+    max-width: 2000px;
 }
 #mid-content-heading{
     margin: auto;
@@ -69,9 +70,9 @@
     margin-left: 15px;
 }
 #banner-discount{
-    width: 85%;
+    width: 75%;
     margin: auto;
-    margin-left: 150px;
+    margin-left: 250px;
     margin-top: 20px;
 }
 #banner-discount > img{
