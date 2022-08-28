@@ -327,3 +327,125 @@
     margin: 25px;
     margin-left: 240px;
 }
+
+///////
+
+
+
+.slide-data-1,.slide-data-2,.slide-data-3 {
+  width: 95%;
+  height: 450px;
+  padding-left: 10px;
+  /* border: 1px solid green; */
+  justify-content: space-evenly;
+  border-radius: 10px;
+  /* margin-left: 50px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-top: 20px;
+  background-color: white;
+}
+.slide-data-1>img ,.slide-data-2>img,.slide-data-3>img{
+  width: 102%;
+  height: 250px;
+  /* margin-left : -10px; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+ .slide-data-1>h5,.slide-data-2>h5,.slide-data-3>h5{
+  margin-left: 5px;
+  margin-top: 20px;
+  white-space: wrap;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+
+  /* border: 1px solid #000000; */
+}
+/* h4:hover{
+        overflow: visible;
+    } */
+
+.des {
+  margin-left: 5px;
+  margin-top: 15px;
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .hold{
+        display: flex;
+        justify-content: space-between;
+    } */
+.wgt {
+  margin-left: 5px;
+  margin-top: 10px;
+  display: flex;
+  color: rgb(56, 55, 55);
+}
+
+h6 {
+  font-size: 15px;
+}
+.wgt :nth-child(1) {
+  margin-left: 1px;
+}
+.wgt :nth-child(2) {
+  margin-left: 5px;
+}
+
+.wgt :nth-child(3) {
+  margin-left: 1px;
+}
+.wgt :nth-child(4) {
+  margin-left: 20px;
+}
+.wgt :nth-child(5) {
+  margin-left: 5px;
+}
+
+.pri {
+  margin-left: 5px;
+  margin-top: 20px;
+  display: flex;
+  color: rgb(56, 55, 55);
+}
+.pri :nth-child(1) {
+  color: red;
+  font-size: 18px;
+}
+.pri :nth-child(2) {
+  /* margin-top: 25px; */
+  margin-left: 5px;
+  font-size: 18px;
+  color: red;
+}
+.pri :nth-child(3) {
+  /* margin-top: 25px; */
+  color: red;
+  font-size: 18px;
+}
+.pri :nth-child(4) {
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.slide-data-1>div>button,.slide-data-2>div>button,.slide-data-3>div>button {
+  margin-left: 180px;
+  /* margin-top: 10px; */
+  margin-right: 30px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e41d36;
+  color: white;
+  /* padding-right: 10px; */
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: -10px;
+
+}

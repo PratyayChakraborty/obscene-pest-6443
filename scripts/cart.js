@@ -305,7 +305,7 @@ function letsgo() {
 function kkkcross() {
      document.getElementById("popup-screen").style.display = "none";
 }
-// document.getElementById("cartlogobtn").addEventListener("click", seecart)
-// function seecart() { 
-//      document.getElementById("popup-screen").style.display = "block";
-// }
+document.getElementById("cartlogobtn").addEventListener("click", seecart)
+function seecart() { 
+     document.getElementById("popup-screen").style.display = "block";
+}

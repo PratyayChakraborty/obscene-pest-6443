@@ -58,9 +58,17 @@ function navbar() {
 
     <div id="nagin"><span><ion-icon class="icons" name="person-outline"></ion-icon> Login</span></div>
 
-    <div id="cartlogobtn"><span><ion-icon class="icons" name="cart-outline"></ion-icon> Cart</span></div>
-</div>`;
+    <div id="cartlogobtn">
+     <div id="item-quntinnav"></div>
+    <span><ion-icon class="icons" name="cart-outline"></ion-icon> Cart</span>
+    <div id="item-totalinnav"></div>
+</div>
     
+</div>
+
+
+`;
+
 }
 
 

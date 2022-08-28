@@ -54,7 +54,20 @@ span[1].onclick = ()=>{
     if(len<0) {len=0;}
   }
 }
+document.querySelector("#addToCart").addEventListener("click",Total)
 
+
+// let total=Total();
+// function Total(){
+//     quntarr = JSON.parse(localStorage.getItem("quntarr"))||[];
+// t=localStorage.getItem("total")||0;
+//    cartdata=  JSON.parse(localStorage.getItem("cartdata"))
+
+//     document.getElementById("item-quntinnav").innerText = cartdata.length;
+//   document.getElementById("item-totalinnav").innerText = 255;
+         
+
+}
 //  cartdata=JSON.parse(localStorage.getItem("cartdata"))|| [];
 // document.getElementById("addToCartbutton").addEventListener("click", function () { addtoCartfunction(el)})
 

@@ -25,7 +25,9 @@
 <div id="popup-screen">
     <!-- <div id="cng"></div> -->
 </div>
-    <div id="nav_container"></div>
+    <div id="nav_container"> 
+        
+    </div>
 
     <!-- body content -->
     <!-- <div class="slideshow-container"> -->
@@ -245,7 +247,7 @@
    
     import navbar from './components/navbar.js';
 
-    
+    // let cartdata=localStorage.getItem("cartdata")||[];
 
     let container = document.getElementById('nav_container')
     container.innerHTML = navbar();
@@ -272,7 +274,14 @@ function clolog(){
     document.getElementById("login-pop").style.display="none";
 }
 // document.getElementById("cartlogobtn").style.display = "none";
+
+let t=localStorage.getItem("total");
+  document.getElementById("item-quntinnav").innerText = cartdata.length;
+document.getElementById("item-totalinnav").innerText = total;
+// localStorage.clear("cartdata");
+// console.log(cartdata.length)
 </script>
+
 <script type="module">
     import footer from './components/footer.js';
     
