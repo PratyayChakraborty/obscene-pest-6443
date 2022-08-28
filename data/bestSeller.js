@@ -117,7 +117,7 @@ function addtoCartfunction(el) {
   localStorage.setItem("quntarr", JSON.stringify(quntarr));
   
   Total()
-  re()
+  location.reload();
 }
 // let total=Total();
 
@@ -136,7 +136,7 @@ function Total(){
           return t
 
 }
+// function total() { 
+
+// }
 // console.log(cartdata.length)
-function re() {
-  location.reload();
-}

@@ -180,6 +180,7 @@ let total = localStorage.getItem('total') || 0;
 document.getElementById("lots").innerText = `${placeadd}`;
 appsp() 
 function appsp() {
+    document.getElementById("cratsummary").innerHTML = "";
     cartdata.forEach(function (el, ind) {
         let samabox = document.createElement("div");
         let samabox1 = document.createElement("div");
