@@ -288,12 +288,14 @@ chikendata.map(function (e, index, array) {
 });
 
 
-let cartdata = [];
+let cartdata =JSON.parse(localStorage.getItem("cartdata")) ||[];
 
 function addToCart(e){
   cartdata.push(e)
+
   localStorage.setItem("cartdata", JSON.stringify(cartdata));
   console.log(cartdata);
+  location.reload();
     };
     
 

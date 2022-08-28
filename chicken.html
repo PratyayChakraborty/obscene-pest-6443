@@ -113,7 +113,7 @@
   </body>
 
 </html>
-<script src="./scripts/chicken.js"></script>
+
 
  <script
       src="https://kit.fontawesome.com/afc5c86662.js"
@@ -123,10 +123,13 @@
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<script>
+  
+</script>
 <script type="module">
+ 
   import navbar from './components/navbar.js';
-  console.log('navbar:', navbar)
+  // console.log('navbar:', navbar)
 
   let container = document.getElementById('nav_container')
 
@@ -136,8 +139,16 @@ document.getElementById("cartlogobtn").addEventListener("click",seecart)
 function seecart() { 
      document.getElementById("popup-screen").style.display = "block";
 }
+let t=localStorage.getItem("total");
+let c=JSON.parse(localStorage.getItem("cartdata"))||[];
+  console.log(c)
+  // cartdata =JSON.stringify( localStorage.getItem("cartdata"))||[];
+// console.log(cartdata.length);
+  document.getElementById("item-quntinnav").innerText = c.length;
+document.getElementById("item-totalinnav").innerText = t;
 </script>
-
+<script src="./scripts/chicken.js"></script>
+ <!-- <script src="./data/bestSeller.js"></script> -->
 <script type="module">
   import footer from './components/footer.js';
   
@@ -145,3 +156,7 @@ function seecart() {
   container.innerHTML = footer();
 
 </script>
+
+
+<!-- <script src="./data/bonelessCuts.js"></script> -->
+<!-- <script src="./data/breakfast&Snacking.js"></script> -->

@@ -68,6 +68,13 @@ function seecart() {
 }
 
 // document.getElementById("cartlogobtn").style.display = "none";
+let t=localStorage.getItem("total");
+let c=JSON.parse(localStorage.getItem("cartdata"))||[];
+  console.log(c)
+  // cartdata =JSON.stringify( localStorage.getItem("cartdata"))||[];
+// console.log(cartdata.length);
+  document.getElementById("item-quntinnav").innerText = c.length;
+document.getElementById("item-totalinnav").innerText = t;
 </script>
 <script type="module">
     import footer from './components/footer.js';
